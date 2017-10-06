@@ -4,9 +4,10 @@
 
 
 ## Contributors
-    - Méric Fournier
-    - Camille Pawlak
-    - Simon Lucas
-    - Alison Heredia
-    - Nicolas Bernaux
-    - Louis Ghodsi
+
+- Méric Fournier
+- Camille Pawlak
+- Simon Lucas
+- Alison Heredia
+- Nicolas Bernaux
+- Louis Ghodsi
