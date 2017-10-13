@@ -1,0 +1,29 @@
+.waves {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    
+    .wave {
+        position: absolute;
+        height: 111px;
+        top: -111px;
+        width: 3200px;
+        animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+        
+        &:nth-of-type(2) {
+            top: -100px;
+            animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.25s infinite, swell 7s ease -1.25s infinite;
+        }
+    }
+}
+
+@keyframes wave {
+  0%   {margin-left: 0;}
+  100% {margin-left: -1600px;}
+}
+
+@keyframes swell {
+  0%, 100% {transform: translate3d(0,0px,0);}
+  50%      {transform: translate3d(0,20px,0);}
+}
