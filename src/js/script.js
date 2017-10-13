@@ -1,1 +1,5 @@
-console.log('Hello world');
+const loggi = () => {
+    console.log('azertyu')
+}
+
+loggi()
