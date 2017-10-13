@@ -1,12 +1,13 @@
+'use strict';
+
 /* Configurations */
 const config = {
     src     : '../src/',
     dist    : '../dist/**',
-    page  : {
-        src     : '../src/index.html',
+    page    : {
+        src     : '../src/**.html',
         dest    :  '../dist/'
     },
-    dist    : '../dist/',
     images  : {
         src     : '../src/img/**',
         dest    :  '../dist/img/'
@@ -19,11 +20,12 @@ const config = {
         src     : '../src/scss/**/**.scss',
         dest    :  '../dist/css'
     },
-    js    : {
-        src     : '../src/js/script.js',
+    js      : {
+        src     : '../src/js/',
+        app     : '../src/js/app.js',
         dest    :  '../dist/js'
     },
-    server    : '../dist/',
+    server  : '../dist/',
 }
 
 
@@ -31,7 +33,6 @@ const config = {
 import gulp          from 'gulp'
 import css_nano      from 'gulp-cssnano'
 import rename        from 'gulp-rename'
-import plumber       from 'gulp-plumber'
 import sass          from 'gulp-sass'
 import autoprefixer  from 'gulp-autoprefixer'
 import concat        from 'gulp-concat'
@@ -40,10 +41,23 @@ import uglify        from 'gulp-uglify'
 import sourcemaps    from 'gulp-sourcemaps'
 import browserify    from 'browserify'
 import babelify      from 'babelify'
+import babel         from 'gulp-babel'
 import source        from 'vinyl-source-stream'
 import buffer        from 'vinyl-buffer'
 import browser_sync  from 'browser-sync'
+import plumber       from 'gulp-plumber'
+import gulp_notify   from 'gulp-notify'
 
+var onError = function (err) {
+    gulp_notify({
+         title      : 'Error',
+         message    : err.message
+     }).write(err);
+
+     console.log(err.toString())
+
+     this.emit('end');
+}
 
 /* Vues */
 const pages = () => {
@@ -67,8 +81,9 @@ const sound = () =>{
 /* SASS */
 const css = () => {
     return  gulp.src( [ config.sass.src ] )
+            .pipe(plumber({ errorHandler: onError }))
             .pipe(sourcemaps.init())
-            .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+            .pipe(sass({outputStyle: 'compressed'}))
             .pipe(autoprefixer({
                 browsers: ['last 2 versions'],
                 cascade: false
@@ -80,49 +95,35 @@ const css = () => {
             .pipe(gulp.dest( config.sass.dest ))
 }
 
-/* browser-sync */
+/* Browser-sync */
 const browserSync  = () =>{
     browser_sync.init({
-        server: config.server,
-        notify : false,
-	    tunnel : "fanta"
+        server  : config.server,
+        notify  : false,
+	    tunnel  : "fanta"
     });
 }
 
 
 /* JS */
-// const js = () => {
-//     return  browserify(config.js.src,{debug: true})
-//             .transform(babelify)
-//             .bundle()
-//             .pipe(source( config.js.src ))
-//             .pipe(buffer())
-//             .pipe(sourcemaps.init({loadMaps: true}))
-//             .pipe(uglify())
-//             .pipe(sourcemaps.write('.'))
-//             .pipe(gulp.dest( config.js.dest ))
-// }
+const js = () => {
+    return  browserify({
+                entries : config.js.app,
+                debug   : true
+            })
+            .transform(babelify, {"presets": ['babel-preset-es2015'].map(require.resolve)})
+            .bundle()
+            .on('error', onError)
+            .pipe(source( 'app.js' ))
+            .pipe(buffer())
+            .pipe(sourcemaps.init({loadMaps: true}))
+            .pipe(uglify())
+            .pipe(plumber({ errorHandler: onError }))
+            .pipe(sourcemaps.write('.'))
+            .pipe(gulp.dest( config.js.dest ))
+}
 
-// const js = () => {
-//    const bundler = browserify({
-//      entries: config.js.src,
-//      debug: true
-//    })
-//    return bundler
-//      .transform(babelify)
-//      .bundle()
-//      .on('error', function(err) {
-//        console.log(err.toString())
-//        this.emit("end")
-//      })
-//      .pipe(source('script.js'))
-//      .pipe(buffer())
-//      .pipe(sourcemaps.init({loadMaps: true}))
-//      .pipe(uglify())
-//      .pipe(sourcemaps.write('.'))
-//      .pipe(gulp.dest(config.js.dest))
-//  }
-
+/* Reload Page */
 const reload = (done) => {
     browser_sync.reload();
     done()
@@ -131,36 +132,12 @@ const reload = (done) => {
 
 /* Watch Task */
 const watchTask = () => {
-    gulp.watch ( config.images.src , gulp.parallel( img, reload ) )
-    gulp.watch ( config.sounds.src , gulp.parallel( sound, reload ) )
-    gulp.watch ( config.sass.src , gulp.parallel( css, reload ) )
-    //gulp.watch ( config.js.src , gulp.series( js ) )
-    //gulp.watch ( config.dist , gulp.series(reload) )
+    gulp.watch ( config.images.src  , gulp.parallel( img, reload ) )
+    gulp.watch ( config.sounds.src  , gulp.parallel( sound, reload ) )
+    gulp.watch ( config.sass.src    , gulp.parallel( css, reload ) )
+    gulp.watch ( config.js.src      , gulp.parallel( js, reload ) )
+    gulp.watch ( config.page.src    , gulp.parallel(reload) )
 }
 
-gulp.task('default', gulp.parallel(pages,img, css, sound, watchTask, browserSync))
-
-// // JS task
-// gulp.task( 'js', function()
-// {
-//     return gulp.src( ['./src/js/*.js'] )        // Get JS files
-//         .pipe( concat( 'script.js' ) )     // Concat in one file
-//         .pipe( uglify() )                // Minify them (problem with ES6)
-//         .pipe( gulp.dest( './dist/js/' ) );     // Put it in folder
-// } );
-//
-//
-//
-// // Watch task
-// gulp.task( 'watch', function()
-// {
-//     gulp.watch( './src/scss/**/**', [ 'sass' ] );
-//     gulp.watch( './src/js/**/**', [ 'js' ] );
-//     gulp.watch( './src/**/*.php', [ 'php' ] );
-//     gulp.watch( './src/img/**/**', [ 'img' ] );
-//     gulp.watch( './src/sounds/**/**', [ 'sounds' ] );
-// } );
-//
-//
-//
-// gulp.task( 'default', [ 'php', 'sass', 'js', 'img', 'sounds', 'watch' ] );
+gulp.task('run', gulp.parallel(pages,img, js , css, sound, watchTask, browserSync))
+gulp.task('default', gulp.parallel(pages,img, js , css, sound))

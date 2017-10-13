@@ -6,6 +6,11 @@
 - Install dependances `npm install`
 - Update gulp-cli `sudo npm i -g gulp-cli`
 
+## Edit
+- Simple task `gulp`
+- Watch and server task `gulp run`
+
+
 ## Contributors
 
 - Méric Fournier
