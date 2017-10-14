@@ -1,3 +1,3 @@
-import Test from './test';
+import listen from './smoothScroll';
 
-tester()
+listen()

@@ -5,7 +5,7 @@ const config = {
     src     : '../src/',
     dist    : '../dist/**',
     page    : {
-        src     : '../src/**.html',
+        src     : '../src/index.html',
         dest    :  '../dist/'
     },
     images  : {
@@ -136,7 +136,7 @@ const watchTask = () => {
     gulp.watch ( config.sounds.src  , gulp.parallel( sound, reload ) )
     gulp.watch ( config.sass.src    , gulp.parallel( css, reload ) )
     gulp.watch ( config.js.src      , gulp.parallel( js, reload ) )
-    gulp.watch ( config.page.src    , gulp.parallel(reload) )
+    gulp.watch ( config.page.src    , gulp.parallel( pages, reload) )
 }
 
 gulp.task('run', gulp.parallel(pages,img, js , css, sound, watchTask, browserSync))
