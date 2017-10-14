@@ -15,10 +15,13 @@
  */
 
 @import 'layouts/landingSection';
+@import 'layouts/firstBottle';
+@import 'layouts/secondBottle';
 
 
 /*
  * Components
  */
 
+@import 'components/sections';
 @import 'components/waves';
