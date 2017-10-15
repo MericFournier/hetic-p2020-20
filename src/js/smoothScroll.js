@@ -7,8 +7,14 @@ const listenScroll = () => {
         touchScreenAnimation()
     }
     else{
+        // Listen scroll (wheel)
         window.addEventListener('wheel', (e) => {
             scrollAnimation(getWheelDirection(e))
+        })
+
+        // Listen keyboardNavigation
+        window.addEventListener('keydown', (e) => {
+            keyboardNavigation(e)
         })
     }
 }
@@ -79,6 +85,22 @@ const scrollAnimation = (direction) => {
 
             window.location.hash = '#' + scroll_wrapper.querySelector('.scrollY-active').getAttribute('data-anchor'); // Anchor in url
         }
+    }
+}
+
+const keyboardNavigation = (e) => {
+    let direction = {}
+    // down
+    if(e.keyCode == 40 ){
+        direction.axe = "y"
+        direction.orientation = parseInt(1)
+        scrollAnimation(direction)
+    }
+    //up
+    else if(e.keyCode == 38 ){
+        direction.axe = "y"
+        direction.orientation = parseInt(-1)
+        scrollAnimation(direction)
     }
 }
 
