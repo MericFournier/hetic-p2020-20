@@ -1,16 +1,20 @@
 let event_timeStamp = 0
-const scroll_wrapper = document.querySelector('#smoothScroll-wrapper')
+const scroll_wrapper = document.querySelector('#smoothScroll-wrapper') // translate wrapper
 const scroll_section = scroll_wrapper.querySelectorAll('section')
 
+const listenScroll = () => {
 
-const listen = () => {
-    console.log('liqten')
-    window.addEventListener('wheel', (e) => {
-        scrollAnimation(getScrollDirection(e))
-    })
+    if('ontouchstart' in window){
+        touchScreenAnimation()
+    }
+    else{
+        window.addEventListener('wheel', (e) => {
+            scrollAnimation(getWhellDirection(e))
+        })
+    }
 }
 
-const getScrollDirection = (e) => {
+const getWhellDirection = (e) => {
         const deltaX = Math.max(-1, Math.min(1, (e.deltaX) )) // Get scroll X
         const deltaY = Math.max(-1, Math.min(1, (e.deltaY) )) // Get scroll Y
         const direction = {}
@@ -31,6 +35,32 @@ const getScrollDirection = (e) => {
         }
 }
 
+
+const touchScreenAnimation = () => {
+    let touch_start
+    let touch_end
+    let direction = {}
+    console.log('zernoifvo')
+    document.addEventListener('touchstart', (e) => {
+        touch_start = parseInt(e.changedTouches[0].pageX)
+    })
+    document.addEventListener('touchend', (e) => {
+        touch_end = parseInt(e.changedTouches[0].pageX)
+        if(touch_start - 5 > touch_end){
+            direction.axe = "y"
+            direction.orientation = parseInt(1)
+             scrollAnimation(direction)
+        }
+        else if(touch_start + 5 < touch_end) {
+            direction.axe = "y"
+            direction.orientation = parseInt(-1)
+             scrollAnimation(direction)
+        }
+
+    })
+
+}
+
 const scrollAnimation = (direction) => {
 
     // scroll Y
@@ -39,20 +69,17 @@ const scrollAnimation = (direction) => {
         const scrollY_active = scroll_wrapper.querySelector('.scrollY-active') // get the active section
         const active_attribute = parseInt(scrollY_active.getAttribute('data-scroll')) // get active section position
 
-        let translate_values = active_attribute + direction.orientation // get the value of translate
+        let translate_values = active_attribute + direction.orientation // get the next of translate
 
-        if(translate_values > scroll_section.length-1){ // end of the page
-            translate_values = (scroll_section.length-1)
+        if(translate_values < scroll_section.length && translate_values >= 0){
+            scroll_wrapper.style.transform = "translateY(-"+ translate_values*100 +"vh)" // translate action
+
+            //Change the active section
+            scrollY_active.classList.remove("scrollY-active")
+            scroll_section[translate_values].classList.add('scrollY-active')
         }
-        if (translate_values < 0) { //top of the page
-            translate_values = 0
-        }
-        scroll_wrapper.style.transform = "translateY(-"+ translate_values*100 +"vh)" // translate action
-        //Change the active section
-        scrollY_active.classList.remove("scrollY-active")
-        scroll_section[translate_values].classList.add('scrollY-active')
     }
 }
 
 
-export default listen
+export default listenScroll

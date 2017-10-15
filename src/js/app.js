@@ -1,3 +1,3 @@
-import listen from './smoothScroll';
+import listenScroll from './smoothScroll';
 
-listen()
+listenScroll()
