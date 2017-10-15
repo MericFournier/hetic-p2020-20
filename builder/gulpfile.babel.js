@@ -5,7 +5,7 @@ const config = {
     src     : '../src/',
     dist    : '../dist/**',
     page    : {
-        src     : '../src/**.html',
+        src     : '../src/index.html',
         dest    :  '../dist/'
     },
     images  : {

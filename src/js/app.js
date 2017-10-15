@@ -1,3 +1,5 @@
-import Test from './test';
+import listenScroll from './smoothScroll';
 
-tester()
+
+// scroll function
+listenScroll()

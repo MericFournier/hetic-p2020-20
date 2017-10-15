@@ -9,31 +9,35 @@
     <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
-    <div id="landingSection" class="section">
-        <p>Je suis la page d'accueil.</p>
+    <div id="smoothScroll-wrapper">
+        <section id="landingSection" data-anchor="landing" data-scroll=0 class="scrollY-active section">
+            <p>Je suis la page d'accueil.</p>
 
-        <div class="waves">
-            <div class="wave first"></div>
-            <div class="wave second"></div>
-        </div>
+            <div class="waves">
+                <div class="wave first"></div>
+                <div class="wave second"></div>
+            </div>
+        </section>
+
+        <section id="firstBottle" class="section" data-anchor="fanta-orange" data-scroll=1>
+            <p>Je suis la première bouteille.</p>
+
+            <div class="waves">
+                <div class="wave first"></div>
+                <div class="wave second"></div>
+            </div>
+        </section>
+
+        <section id="secondBottle" class="section" data-anchor="fanta-apple" data-scroll=2>
+            <p>Je suis la seconde bouteille.</p>
+
+            <div class="waves">
+                <div class="wave first"></div>
+                <div class="wave second"></div>
+            </div>
+        </section>
+
     </div>
-    
-    <div id="firstBottle" class="section">
-        <p>Je suis la première bouteille.</p>
-        
-        <div class="waves">
-            <div class="wave first"></div>
-            <div class="wave second"></div>
-        </div>
-    </div>
-    
-    <div id="secondBottle" class="section">
-        <p>Je suis la seconde bouteille.</p>
-        
-        <div class="waves">
-            <div class="wave first"></div>
-            <div class="wave second"></div>
-        </div>
-    </div>
+<script src="js/app.js" charset="utf-8"></script>
 </body>
 </html>
