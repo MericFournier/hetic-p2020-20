@@ -1,4 +1,4 @@
-import listenScroll from './smoothScroll';
+import {listenScroll }from './smoothScroll';
 
 import anchor from './urlAnchor';
 

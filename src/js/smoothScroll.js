@@ -113,10 +113,10 @@ const scrollAnimation = (direction) => {
 
         const scrollY_active = scroll_wrapper.querySelector('.scrollY-active') // get the active section
         const active_attribute = parseInt(scrollY_active.getAttribute('data-scroll')) // get active section position
-
-        let translate_values = active_attribute + direction.orientation // get the next of translate
+        const translate_values = active_attribute + direction.orientation // get the next of translate
 
         if(translate_values < scroll_section.length && translate_values >= 0){
+
             scroll_wrapper.style.transform = "translateY(-"+ translate_values*100 +"vh)" // translate action
 
             //Change the active section
@@ -128,4 +128,7 @@ const scrollAnimation = (direction) => {
     }
 }
 
-export default listenScroll
+export {
+    listenScroll,
+    scrollAnimation
+}
