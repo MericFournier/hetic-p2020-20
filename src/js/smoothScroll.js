@@ -39,7 +39,7 @@ const touchScreenAnimation = () => {
     let touch_start
     let touch_end
     let direction = {}
-    
+
     document.addEventListener('touchstart', (e) => {
         touch_start = parseInt(e.changedTouches[0].pageX)
     })
@@ -76,6 +76,8 @@ const scrollAnimation = (direction) => {
             //Change the active section
             scrollY_active.classList.remove("scrollY-active")
             scroll_section[translate_values].classList.add('scrollY-active')
+
+            window.location.hash = '#' + scroll_wrapper.querySelector('.scrollY-active').getAttribute('data-anchor'); // Anchor in url
         }
     }
 }
