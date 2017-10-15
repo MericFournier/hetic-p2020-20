@@ -1,8 +1,25 @@
-let event_timeStamp = 0
-const scroll_wrapper = document.querySelector('#smoothScroll-wrapper') // translate wrapper
-const scroll_section = scroll_wrapper.querySelectorAll('section')
+let event_timeStamp     = -1500
+const scroll_wrapper    = document.querySelector('#smoothScroll-wrapper') // translate wrapper
+const scroll_section    = scroll_wrapper.querySelectorAll('section')
+const previous_button   = scroll_wrapper.querySelectorAll('.navigation-button .previous-navigation-button')
+const next_button       = scroll_wrapper.querySelectorAll('.navigation-button .next-navigation-button')
 
 const listenScroll = () => {
+
+    previous_button.forEach((_previous_button) => {
+        _previous_button.addEventListener('click', (e) => {
+            previousSection()
+            e.preventDefault()
+        })
+    })
+    next_button.forEach((_next_button) => {
+        _next_button.addEventListener('click', (e) => {
+            nextSection()
+            e.preventDefault()
+        })
+    })
+
+
     if('ontouchstart' in window){
         touchScreenAnimation()
     }
@@ -22,24 +39,22 @@ const listenScroll = () => {
 const getWheelDirection = (e) => {
         const deltaX = Math.max(-1, Math.min(1, (e.deltaX) )) // Get scroll X
         const deltaY = Math.max(-1, Math.min(1, (e.deltaY) )) // Get scroll Y
-        const direction = {}
+
         if(e.timeStamp > (event_timeStamp+1500)){ // Get wheel event only every 1.5 second
             event_timeStamp = e.timeStamp
             if (deltaY != 0) {
-                direction.axe = "y"
-                direction.orientation = parseInt(deltaY)
+                if(deltaY > 0){
+                    nextSection()
+                }
+                else {
+                    previousSection()
+                }
             }
-            else if (deltaX != 0) {
-                direction.axe = "x"
-                direction.orientation = parseInt(deltaX)
-            }
-            return direction
         }
         else {
             return false
         }
 }
-
 
 const touchScreenAnimation = () => {
     let touch_start
@@ -66,6 +81,31 @@ const touchScreenAnimation = () => {
 
 }
 
+const nextSection = () => {
+    let direction = {}
+    direction.axe = "y"
+    direction.orientation = parseInt(1)
+    scrollAnimation(direction)
+}
+
+const previousSection = () => {
+    let direction = {}
+    direction.axe = "y"
+    direction.orientation = parseInt(-1)
+    scrollAnimation(direction)
+}
+
+const keyboardNavigation = (e) => {
+    // down
+    if(e.keyCode == 40 ){
+        nextSection()
+    }
+    //up
+    else if(e.keyCode == 38 ){
+        previousSection()
+    }
+}
+
 const scrollAnimation = (direction) => {
 
     // scroll Y
@@ -83,26 +123,9 @@ const scrollAnimation = (direction) => {
             scrollY_active.classList.remove("scrollY-active")
             scroll_section[translate_values].classList.add('scrollY-active')
 
-            window.location.hash = '#' + scroll_wrapper.querySelector('.scrollY-active').getAttribute('data-anchor'); // Anchor in url
+            window.location.hash = '#' + scroll_wrapper.querySelector('.scrollY-active').getAttribute('data-anchor') // Anchor in url
         }
     }
 }
-
-const keyboardNavigation = (e) => {
-    let direction = {}
-    // down
-    if(e.keyCode == 40 ){
-        direction.axe = "y"
-        direction.orientation = parseInt(1)
-        scrollAnimation(direction)
-    }
-    //up
-    else if(e.keyCode == 38 ){
-        direction.axe = "y"
-        direction.orientation = parseInt(-1)
-        scrollAnimation(direction)
-    }
-}
-
 
 export default listenScroll

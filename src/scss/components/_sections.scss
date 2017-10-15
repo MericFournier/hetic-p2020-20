@@ -4,3 +4,10 @@ section.section {
     width: 100vw;
     overflow: hidden
 }
+
+.navigation-button{
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+    z-index: 1
+}
