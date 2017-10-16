@@ -3,9 +3,9 @@
 /* Configurations */
 const config = {
     src     : '../src/',
-    dist    : '../dist/**',
+    dist    : '../dist/',
     page    : {
-        src     : '../src/index.html',
+        src     : '../src/*.php',
         dest    :  '../dist/'
     },
     images  : {
@@ -47,6 +47,7 @@ import buffer        from 'vinyl-buffer'
 import browser_sync  from 'browser-sync'
 import plumber       from 'gulp-plumber'
 import gulp_notify   from 'gulp-notify'
+import connect       from 'gulp-connect-php'
 
 var onError = function (err) {
     gulp_notify({
@@ -96,12 +97,16 @@ const css = () => {
 }
 
 /* Browser-sync */
-const browserSync  = () =>{
-    browser_sync.init({
-        server  : config.server,
-        notify  : false,
-	    tunnel  : "fanta"
+const server  = () =>{
+    console.log(config.dist)
+    connect.server({
+        base     : config.server,
     });
+   browser_sync.init({
+       proxy  : '127.0.0.1:8000',
+       notify  : false,
+       tunnel  : "fanta"
+   });
 }
 
 
@@ -139,5 +144,5 @@ const watchTask = () => {
     gulp.watch ( config.page.src    , gulp.parallel( pages, reload) )
 }
 
-gulp.task('run', gulp.parallel(pages,img, js , css, sound, watchTask, browserSync))
+gulp.task('run', gulp.parallel(pages,img, js , css, sound, watchTask, server))
 gulp.task('default', gulp.parallel(pages,img, js , css, sound))
