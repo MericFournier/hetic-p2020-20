@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 
 /* Configurations */
 const config = {
     src     : '../src/',
     dist    : '../dist/',
     page    : {
-        src     : '../src/*.php',
+        src     : '../src/*.html',
         dest    :  '../dist/'
     },
     images  : {
@@ -53,11 +53,11 @@ var onError = function (err) {
     gulp_notify({
          title      : 'Error',
          message    : err.message
-     }).write(err);
+     }).write(err)
 
      console.log(err.toString())
 
-     this.emit('end');
+     this.emit('end')
 }
 
 /* Vues */
@@ -70,13 +70,13 @@ const pages = () => {
 const img = () => {
     return  gulp.src( [ config.images.src ] )
             .pipe(imagemin())
-            .pipe(gulp.dest( config.images.dest ));
+            .pipe(gulp.dest( config.images.dest ))
 }
 
 /*  Sounds */
 const sound = () =>{
     return  gulp.src( [ config.sounds.src ] )
-            .pipe(gulp.dest( config.sounds.dest ));
+            .pipe(gulp.dest( config.sounds.dest ))
 }
 
 /* SASS */
@@ -90,7 +90,7 @@ const css = () => {
                 cascade: false
             }))
             .pipe(rename(function (path) {
-                path.basename += '.min';
+                path.basename += '.min'
             }))
             .pipe(sourcemaps.write('.'))
             .pipe(gulp.dest( config.sass.dest ))
@@ -101,13 +101,13 @@ const server  = () =>{
     console.log(config.dist)
     connect.server({
         base     : config.server,
-    });
+    })
    browser_sync.init({
        proxy  : '127.0.0.1:8000',
        notify  : false,
        tunnel  : "fanta",
        scroll: false,
-   });
+   })
 }
 
 
@@ -131,7 +131,7 @@ const js = () => {
 
 /* Reload Page */
 const reload = (done) => {
-    browser_sync.reload();
+    browser_sync.reload()
     done()
 
 }
