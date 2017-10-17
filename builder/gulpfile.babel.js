@@ -105,7 +105,8 @@ const server  = () =>{
    browser_sync.init({
        proxy  : '127.0.0.1:8000',
        notify  : false,
-       tunnel  : "fanta"
+       tunnel  : "fanta",
+       scroll: false,
    });
 }
 

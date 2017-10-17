@@ -1,6 +1,3 @@
-<?php
-include("svg-stock.php")
- ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,6 +9,9 @@ include("svg-stock.php")
     <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
+    <?php
+    include("svg-stock.php")
+     ?>
     <div id="smoothScroll-wrapper">
         <section id="landingSection" data-anchor="accueil" data-scroll=0 class="scrollY-active section">
             <p>Je suis la page d'accueil.</p>
@@ -22,10 +22,10 @@ include("svg-stock.php")
             </div>
             <div class="waves">
                 <svg class="wave first">
-                    <use class="ic-1" xlink:href="#wave" x="0" y="0" />
+                    <use class="ic-1" xlink:href="#wave" x="0" y="0"/>
                 </svg>
-                <svg width="80" height="80" class="wave second">
-                    <use class="ic-1" xlink:href="#wave" x="0" y="0" />
+                <svg class="wave second">
+                    <use class="ic-1" xlink:href="#wave" x="0" y="0"/>
                 </svg>
         </section>
 
@@ -39,10 +39,10 @@ include("svg-stock.php")
 
             <div class="waves">
                 <svg class="wave first">
-                    <use class="ic-1" xlink:href="#wave" x="0" y="0" />
+                    <use class="ic-1" xlink:href="#wave" x="0" y="0"/>
                 </svg>
-                <svg width="80" height="80" class="wave second">
-                    <use class="ic-1" xlink:href="#wave" x="0" y="0" />
+                <svg class="wave second">
+                    <use class="ic-1" xlink:href="#wave" x="0" y="0"/>
                 </svg>
         </section>
 
@@ -56,10 +56,10 @@ include("svg-stock.php")
 
             <div class="waves">
                 <svg class="wave first">
-                    <use class="ic-1" xlink:href="#wave" x="0" y="0" />
+                    <use class="ic-1" xlink:href="#wave" x="0" y="0"/>
                 </svg>
-                <svg width="80" height="80" class="wave second">
-                    <use class="ic-1" xlink:href="#wave" x="0" y="0" />
+                <svg class="wave second">
+                    <use class="ic-1" xlink:href="#wave" x="0" y="0"/>
                 </svg>
         </section>
 
@@ -73,10 +73,10 @@ include("svg-stock.php")
 
             <div class="waves">
                 <svg class="wave first">
-                    <use class="ic-1" xlink:href="#wave" x="0" y="0" />
+                    <use class="ic-1" xlink:href="#wave" x="0" y="0"/>
                 </svg>
-                <svg width="80" height="80" class="wave second">
-                    <use class="ic-1" xlink:href="#wave" x="0" y="0" />
+                <svg class="wave second">
+                    <use class="ic-1" xlink:href="#wave" x="0" y="0"/>
                 </svg>
         </section>
 

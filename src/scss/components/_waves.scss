@@ -2,13 +2,20 @@
 .waves {
     position: absolute;
     width: 100%;
-    bottom: -10px;
+    bottom: -50px;
     left: 0;
 
     .wave {
         position: absolute;
         width: 200vw;
-        top: -111px;
+        top: -130px;
+        left: 0;
+
+        @media screen and (orientation: portrait)  {
+              & {
+                height: 80px;
+              }
+          }
 
         &.first {
             animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
@@ -16,22 +23,24 @@
         }
 
         &.second {
-            top: -100px;
+            top: -140px;
             animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.25s infinite, swell 7s ease -1.25s infinite;
-            z-index: 1
+            z-index: 1;
         }
     }
 }
 @keyframes wave {
-  0%   {margin-left: 0;}
-  100% {margin-left: -100vw;}
+      from   {margin-left: 0}
+      to {margin-left: -100vw}
 }
 
 @keyframes swell {
-  0%, 100% {transform: translate3d(0,0px,0);}
-  50%      {transform: translate3d(0,20px,0);}
+      0%, 100% {transform: translate(0,0px);}
+      50%      {transform: translate(0,10px);}
 }
 
+
+// Section settings
 #landingSection{
     .waves{
 
