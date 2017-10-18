@@ -68,12 +68,12 @@ const touchScreenAnimation = () => {
         touch_end = parseInt(e.changedTouches[0].pageY)
         if(touch_start - 5 > touch_end){
             direction.axe = "y"
-            direction.orientation = parseInt(-1)
+            direction.orientation = parseInt(1)
              scrollAnimation(direction)
         }
         else if(touch_start + 5 < touch_end) {
             direction.axe = "y"
-            direction.orientation = parseInt(1)
+            direction.orientation = parseInt(-1)
              scrollAnimation(direction)
         }
 
