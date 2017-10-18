@@ -1,27 +1,32 @@
-const anchor = () => {
-    const hash = window.location.hash.substr(1)
-    if(hash){
-        const section_to_hach = document.querySelector('section[data-anchor='+hash+']')
-        if(section_to_hach){
-            const translate_values = section_to_hach.getAttribute('data-scroll')
-            const scrollY_active = document.querySelector('.scrollY-active') // get the active section
-            const scroll_section    = document.querySelectorAll('section')
+class Anchor {
+    constructor() {
+        this.hash = window.location.hash.substr(1)
+    }
+    anchorTest(){
+        if(hash){
+            this.section_equal_hach = document.querySelector('section[data-anchor ='+ hash +']')
+            //if hash match to a section
+            if(section_to_hach){
+                this.translate_values   = this.section_equal_hach.getAttribute('data-scroll')
+                this.scrollY_active     = document.querySelector('.scrollY-active')
+                this.scroll_section     = document.querySelectorAll('section')
 
-            document.querySelector('#smoothScroll-wrapper').style.transform = 'translateY(-'+ translate_values *100+'vh)'
+                // translate action
+                document.querySelector('#smoothScroll-wrapper').style.transform = 'translateY(-'+ this.translate_values *100+'vh)'
 
-            const active_attribute = parseInt(scrollY_active.getAttribute('data-scroll')) // get active section position
+                // get active section position
+                this.active_attribute   = parseInt(scrollY_active.getAttribute('data-scroll'))
 
-            // add class scrollY-active to the active section
-            scrollY_active.classList.remove("scrollY-active")
-            scroll_section[translate_values].classList.add('scrollY-active')
-        }
-        else{
-            window.location.hash = 'acceuil'
+                // add class scrollY-active to the active section
+                this.scrollY_active.classList.remove("scrollY-active")
+                this.scroll_section[this.translate_values].classList.add('scrollY-active')
+            }
+            else{
+                window.location.hash = 'acceuil'
+            }
         }
     }
 }
 
 
-
-
-export default anchor
+export default Anchor

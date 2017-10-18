@@ -145,35 +145,3 @@ class ObjScroll {
 }
 
 export default ObjScroll
-
-/*
-
-const scrollAnimation = (direction) => {
-
-    // scroll Y
-    if (direction && direction.axe == 'y'){
-
-        const scrollY_active = scroll_wrapper.querySelector('.scrollY-active') // get the active section
-        const active_attribute = parseInt(scrollY_active.getAttribute('data-scroll')) // get active section position
-        const translate_values = active_attribute + direction.orientation // get the next of translate
-
-        if(translate_values < scroll_section.length && translate_values >= 0){
-
-            scroll_wrapper.style.transform = "translateY(-"+ translate_values*100 +"vh)" // translate action
-
-            //Change the active section
-            scrollY_active.classList.remove("scrollY-active")
-            scroll_section[translate_values].classList.add('scrollY-active')
-
-            window.location.hash = '#' + scroll_wrapper.querySelector('.scrollY-active').getAttribute('data-anchor') // Anchor in url
-        }
-    }
-}
-
-export {
-    listenScroll,
-    scrollAnimation
-}
-
-
-*/
