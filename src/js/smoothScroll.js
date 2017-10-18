@@ -19,6 +19,7 @@ const listenScroll = () => {
         })
     })
 
+    document.querySelector('.test').innerHTML = "test"
 
     if('ontouchstart' in window){
         touchScreenAnimation()
