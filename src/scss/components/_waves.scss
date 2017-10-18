@@ -10,6 +10,7 @@
         width: 200vw;
         top: -130px;
         left: 0;
+        will-change: transform;
 
         @media screen and (orientation: portrait)  {
               & {
@@ -21,22 +22,27 @@
             animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
             z-index: 2
         }
+    }
 
-        &.second {
+    .wave2{
+        animation: swell 7s ease -1.25s infinite;
+        will-change: transform;
+
+        .second {
             top: -140px;
-            animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.25s infinite, swell 7s ease -1.25s infinite;
+            animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.25s infinite;
             z-index: 1;
         }
     }
 }
 @keyframes wave {
-      from   {margin-left: 0}
-      to {margin-left: -100vw}
+      from   { transform: translate(0)}
+      to     { transform: translate(-100vw)}
 }
 
 @keyframes swell {
-      0%, 100% {transform: translate(0,0px);}
-      50%      {transform: translate(0,10px);}
+    0%, 100% {transform: translate(0,0px);}
+    50%      {transform: translate(0,10px);}
 }
 
 

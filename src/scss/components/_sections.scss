@@ -1,3 +1,8 @@
+#smoothScroll-wrapper{
+    transition: transform 0.8s ease-in-out;
+    will-change: transform;
+}
+
 section.section {
     position: relative;
     height: 100vh;
@@ -10,4 +15,27 @@ section.section {
     bottom: 100px;
     right: 50px;
     z-index: 1
+}
+
+.bottle{
+    position: absolute;
+    height: 70vh;
+    top: 10vh;
+    right: 100%;
+}
+
+.detail{
+    height: 100%;
+    position: absolute;
+    left: calc(100% + 40px);
+    top: 0;
+    width: 100%;
+    background: white;
+    will-change: transform;
+    transition: transform 0.66s ease-in-out;
+    box-shadow: -20px 0px 40px white;
+    z-index: 3
+}
+.detail-active{
+    transform: translate( calc(-100% - 40px));
 }

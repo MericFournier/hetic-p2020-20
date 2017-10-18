@@ -62,7 +62,6 @@ class ObjScroll {
         const previous_button    = this.scroll_wrapper.querySelectorAll('.navigation-button .previous-navigation-button')
         const next_button        = this.scroll_wrapper.querySelectorAll('.navigation-button .next-navigation-button')
         // Button previous
-        console.log('button')
         previous_button.forEach((_previous_button) => {
             _previous_button.addEventListener('click', (e) => {
                 this.previousSection()
@@ -122,9 +121,9 @@ class ObjScroll {
     }
 
     scrollAnimation(direction){
-
+        const detail_open = this.scroll_wrapper.querySelector('.detail-active') // get the active section
         // scroll Y
-        if (direction && direction.axe == 'y'){
+        if (direction && direction.axe == 'y' && !detail_open){
 
             const scrollY_active = this.scroll_wrapper.querySelector('.scrollY-active') // get the active section
             const active_attribute = parseInt(scrollY_active.getAttribute('data-scroll')) // get active section position
