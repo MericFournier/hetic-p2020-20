@@ -62,10 +62,10 @@ const touchScreenAnimation = () => {
     let direction = {}
 
     document.addEventListener('touchstart', (e) => {
-        touch_start = parseInt(e.changedTouches[0].pageX)
+        touch_start = parseInt(e.changedTouches[0].pageY)
     })
     document.addEventListener('touchend', (e) => {
-        touch_end = parseInt(e.changedTouches[0].pageX)
+        touch_end = parseInt(e.changedTouches[0].pageY)
         if(touch_start - 5 > touch_end){
             direction.axe = "y"
             direction.orientation = parseInt(-1)
