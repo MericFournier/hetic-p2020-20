@@ -25,8 +25,12 @@ const listenScroll = () => {
         touchScreenAnimation()
         document.querySelector('.test').innerHTML = "j'accepte le touch screen"
         window.addEventListener('scroll', (e) => {
+            console.log
             e.preventDefault()
         })
+        document.ontouchmove = function (e) {
+          e.preventDefault();
+        }
     }
     else{
         // Listen scroll (wheel)
