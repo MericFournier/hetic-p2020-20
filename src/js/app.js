@@ -2,7 +2,7 @@ import ObjScroll from './smoothScroll';
 
 import Anchor from './urlAnchor';
 
-import DetailBottle from './DetailBottle';
+import DetailBottle from './detailBottle';
 
 
 // Anchor test
