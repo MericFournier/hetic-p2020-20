@@ -22,6 +22,9 @@ const listenScroll = () => {
 
     if('ontouchstart' in window){
         touchScreenAnimation()
+        window.addEventListener('scroll', (e) => {
+            e.preventDefault()
+        })
     }
     else{
         // Listen scroll (wheel)
