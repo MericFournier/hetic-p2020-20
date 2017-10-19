@@ -1,40 +1,36 @@
 //global for waves
-.waves {
+.waves{
     position: absolute;
-    width: 100%;
+    width: 100vw;
     bottom: -50px;
     left: 0;
-
-    .wave {
-        position: absolute;
-        width: 200vw;
-        top: -130px;
-        left: 0;
-        will-change: transform;
-
-        @media screen and (orientation: portrait)  {
-              & {
-                height: 80px;
-              }
-          }
-
-        &.first {
-            animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-            z-index: 2
-        }
-    }
-
-    .wave2{
-        animation: swell 7s ease -1.25s infinite;
-        will-change: transform;
-
-        .second {
-            top: -140px;
-            animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.25s infinite;
-            z-index: 1;
-        }
-    }
 }
+.waves__waveFirst, .waves__waveSecond{
+    position: absolute;
+    width: 200vw;
+    top: -130px;
+    left: 0;
+    will-change: transform;
+}
+
+.waves__waveFirst{
+    animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    z-index: 2;
+    fill : #FFA500;
+}
+
+.waves__containerWaveSecond{
+    animation: swell 7s ease -1.25s infinite;
+    will-change: transform;
+}
+
+.waves__waveSecond{
+    top: -140px;
+    animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.25s infinite;
+    z-index: 1;
+    fill : #e59400;
+}
+
 @keyframes wave {
       from   { transform: translate(0)}
       to     { transform: translate(-100vw)}
@@ -43,67 +39,4 @@
 @keyframes swell {
     0%, 100% {transform: translate(0,0px);}
     50%      {transform: translate(0,10px);}
-}
-
-
-// Section settings
-#landingSection{
-    .waves{
-
-        .first{
-            fill : #FFA500;
-        }
-
-        .second{
-            fill : #e59400;
-        }
-    }
-}
-
-#firstBottle{
-    background: #FFA500;
-
-
-    .waves{
-
-        .first{
-            fill : #8A2BE2;
-        }
-
-        .second{
-            fill : #601e9e;
-        }
-    }
-}
-
-#secondBottle{
-    background: #8A2BE2;
-
-
-    .waves{
-
-        .first{
-            fill : #E50000;
-        }
-
-        .second{
-            fill : #ce0000;
-        }
-    }
-}
-
-#thirdBottle{
-    background: #E50000;
-
-
-    .waves{
-
-        .first{
-            fill : #ffffff;
-        }
-
-        .second{
-            fill : #9eb6cb;
-        }
-    }
 }
