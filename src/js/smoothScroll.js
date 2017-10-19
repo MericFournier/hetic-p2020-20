@@ -1,9 +1,12 @@
 class ObjScroll {
     constructor(){
-        this.event_timeStamp    = -1500
+        this.event_timeStamp    = -2500
         this.scroll_wrapper     = document.querySelector('#smoothScroll-wrapper') // translate wrapper
-        this.scroll_section     = this.scroll_wrapper.querySelectorAll('section') // get the active section
-
+        this.scroll_section     = document.querySelectorAll('section') // get the active section
+        this.waves              = document.querySelector('.waves')
+        this.sub_waves_div      = document.querySelector('.waves__subWaveDiv')
+        this.current_section    = 0
+        this.anchor             = "accueil"
 
     }
     listenScroll(){
@@ -81,7 +84,7 @@ class ObjScroll {
         const deltaY = Math.max(-1, Math.min(1, (e.deltaY) )) // Get scroll Y
 
         // Get wheel event only every 1.5 second
-        if(e.timeStamp > (this.event_timeStamp+1500)){
+        if(e.timeStamp > (this.event_timeStamp+2500)){
             this.event_timeStamp = e.timeStamp
             if (deltaY != 0) {
                 if(deltaY > 0){
@@ -121,23 +124,47 @@ class ObjScroll {
     }
 
     scrollAnimation(direction){
-        const detail_open = this.scroll_wrapper.querySelector('.detail-active') // get the active section
         // scroll Y
-        if (direction && direction.axe == 'y' && !detail_open){
+        if (direction && direction.axe == 'y'){
+            const section_active = document.querySelector('.section--active') //get active section
+            const current_section = this.current_section + direction.orientation // get the next of translate
 
-            const scrollY_active = this.scroll_wrapper.querySelector('.scrollY-active') // get the active section
-            const active_attribute = parseInt(scrollY_active.getAttribute('data-scroll')) // get active section position
-            const translate_values = active_attribute + direction.orientation // get the next of translate
+            // Test next section
+            if (current_section < this.scroll_section.length && current_section >= 0) {
+                this.current_section = this.current_section + direction.orientation
 
-            if(translate_values < this.scroll_section.length && translate_values >= 0){
+                // scroll next
+                if (direction.orientation > 0) {
+                    this.waves.style.animation = "transitionPage 2s"
+                }
+                // scroll previous
+                else if (direction.orientation < 0) {
+                    this.waves.style.animation = "transitionPage 2s reverse"
+                }
 
-                this.scroll_wrapper.style.transform = "translateY(-"+ translate_values*100 +"vh)" // translate action
 
-                //Change the active section
-                scrollY_active.classList.remove("scrollY-active")
-                this.scroll_section[translate_values].classList.add('scrollY-active')
+                window.setTimeout(() => {
+                    // remove the color wave class
+                    this.waves.classList.remove('waves__'+this.anchor)
+                    // set the new anchor
+                    this.anchor = this.scroll_section[this.current_section].getAttribute('data-anchor')
+                    // ass the color wave class
+                    this.waves.classList.add('waves__'+this.anchor)
 
-                window.location.hash = '#' + this.scroll_wrapper.querySelector('.scrollY-active').getAttribute('data-anchor') // Anchor in url
+
+                    window.location.hash = this.anchor // Anchor in url
+
+                    window.setTimeout(() => {
+                        // reset animation
+                        this.waves.style.animation = ""
+                    },1000)
+                },1000)
+
+
+                // change section
+                section_active.classList.remove('section--active')
+                this.scroll_section[this.current_section].classList.add('section--active')
+
             }
         }
     }
