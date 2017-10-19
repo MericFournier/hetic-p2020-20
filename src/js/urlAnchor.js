@@ -8,7 +8,7 @@ class Anchor {
             //if hash match to a section
             if(section_to_hach){
                 this.translate_values   = this.section_equal_hach.getAttribute('data-scroll')
-                this.scrollY_active     = document.querySelector('.scrollY-active')
+                this.scrollY_active     = document.querySelector('.section--active')
                 this.scroll_section     = document.querySelectorAll('section')
 
                 // translate action
@@ -17,9 +17,9 @@ class Anchor {
                 // get active section position
                 this.active_attribute   = parseInt(scrollY_active.getAttribute('data-scroll'))
 
-                // add class scrollY-active to the active section
-                this.scrollY_active.classList.remove("scrollY-active")
-                this.scroll_section[this.translate_values].classList.add('scrollY-active')
+                // add class section--active to the active section
+                this.scrollY_active.classList.remove("section--active")
+                this.scroll_section[this.translate_values].classList.add('section--active')
             }
             else{
                 window.location.hash = 'acceuil'
