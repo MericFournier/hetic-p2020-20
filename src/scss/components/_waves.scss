@@ -1,4 +1,7 @@
-//global for waves
+/*
+ * Global for waves
+ */
+
 .waves {
     position: absolute;
     width: 100%;
@@ -13,14 +16,12 @@
         will-change: transform;
 
         @media screen and (orientation: portrait)  {
-              & {
-                height: 80px;
-              }
-          }
+            height: 80px;
+        }
 
         &.first {
             animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-            z-index: 2
+            z-index: 2;
         }
     }
 
@@ -36,8 +37,8 @@
     }
 }
 @keyframes wave {
-      from   { transform: translate(0)}
-      to     { transform: translate(-100vw)}
+    0%   {transform: translate(0);}
+    100% {transform: translate(-100vw);}
 }
 
 @keyframes swell {
@@ -45,64 +46,61 @@
     50%      {transform: translate(0,10px);}
 }
 
+/*
+ * Section settings
+ */
 
-// Section settings
-#landingSection{
-    .waves{
-
-        .first{
-            fill : #FFA500;
+#landingSection {
+    .waves {
+        .first {
+            fill: #FFA500;
         }
 
-        .second{
-            fill : #e59400;
+        .second {
+            fill: #e59400;
         }
     }
 }
 
-#firstBottle{
+#firstBottle {
     background: #FFA500;
 
+    .waves {
 
-    .waves{
-
-        .first{
+        .first {
             fill : #8A2BE2;
         }
 
-        .second{
+        .second {
             fill : #601e9e;
         }
     }
 }
 
-#secondBottle{
+#secondBottle {
     background: #8A2BE2;
 
+    .waves {
 
-    .waves{
-
-        .first{
+        .first {
             fill : #E50000;
         }
 
-        .second{
+        .second {
             fill : #ce0000;
         }
     }
 }
 
-#thirdBottle{
+#thirdBottle {
     background: #E50000;
 
-
-    .waves{
-
-        .first{
+    .waves {
+        .first {
             fill : #ffffff;
         }
 
-        .second{
+        .second {
             fill : #9eb6cb;
         }
     }
