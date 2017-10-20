@@ -7,6 +7,7 @@ class ObjScroll {
         this.sub_waves_div      = document.querySelector('.waves__subWaveDiv')
         this.current_section    = 0
         this.anchor             = "accueil"
+        this.bubbles            = document.querySelector('.bubbles')
 
     }
     listenScroll(){
@@ -146,10 +147,14 @@ class ObjScroll {
                 window.setTimeout(() => {
                     // remove the color wave class
                     this.waves.classList.remove('waves__'+this.anchor)
+                    // remove bubble color
+                    this.bubbles.classList.remove('bubbles__'+this.anchor)
                     // set the new anchor
                     this.anchor = this.scroll_section[this.current_section].getAttribute('data-anchor')
-                    // ass the color wave class
+                    // add the color wave class
                     this.waves.classList.add('waves__'+this.anchor)
+                    // add the color bubble class
+                    this.bubbles.classList.add('bubbles__'+this.anchor)
 
 
                     window.location.hash = this.anchor // Anchor in url

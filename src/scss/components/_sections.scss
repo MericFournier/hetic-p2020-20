@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-section.section {
-=======
 section.section{
->>>>>>> master
     position: relative;
     width: 100vw;
-<<<<<<< HEAD
-    overflow: hidden;
-=======
     height: 100vh;
     overflow: hidden;
     display: none;
@@ -15,38 +8,18 @@ section.section{
 
 section.section--active{
     display: block;
->>>>>>> master
 }
 
-.navigation-button {
+.navigation-button{
     position: absolute;
     bottom: 100px;
     right: 50px;
     z-index: 1;
 }
 
-.bottle {
+.bottle{
     position: absolute;
     height: 70vh;
     top: 10vh;
     right: 100%;
 }
-<<<<<<< HEAD
-
-.detail {
-    height: 100%;
-    position: absolute;
-    left: calc(100% + 40px);
-    top: 0;
-    width: 100%;
-    background: white;
-    will-change: transform;
-    transition: transform 0.66s ease-in-out;
-    box-shadow: -20px 0px 40px white;
-    z-index: 3;
-}
-.detail-active{
-    transform: translate(calc(-100% - 40px));
-}
-=======
->>>>>>> master
