@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-section.section {
-=======
 section.section{
->>>>>>> master
     position: relative;
     width: 100vw;
-<<<<<<< HEAD
-    overflow: hidden;
-=======
     height: 100vh;
     overflow: hidden;
     display: none;
@@ -15,7 +8,6 @@ section.section{
 
 section.section--active{
     display: block;
->>>>>>> master
 }
 
 .navigation-button {
@@ -31,7 +23,6 @@ section.section--active{
     top: 10vh;
     right: 100%;
 }
-<<<<<<< HEAD
 
 .detail {
     height: 100%;
@@ -48,5 +39,3 @@ section.section--active{
 .detail-active{
     transform: translate(calc(-100% - 40px));
 }
-=======
->>>>>>> master
