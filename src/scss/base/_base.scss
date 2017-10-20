@@ -3,16 +3,9 @@ body {
     overflow: hidden;
 }
 
-.display-none{
-    display: none;
-}
-
-.overflow-body-fix-for-iphone{
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
+/*
+ * Define title size
+ */
 
 h1 {
     font-size: 2.5rem;
@@ -40,6 +33,16 @@ h6 {
 
 p {
     font-size: 1rem;
+}
+
+/*
+ * Fix class
+ */
+
+.overflow-body-fix-for-iphone {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .smoothScroll-wrapper {

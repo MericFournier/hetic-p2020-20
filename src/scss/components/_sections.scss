@@ -1,4 +1,8 @@
-section.section{
+/*
+ * Template of all sections
+ */
+
+section.section {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -6,13 +10,13 @@ section.section{
     display: none;
 }
 
-section.section--active{
+section.section--active {
     display: block;
 }
 
 .navigation-button {
     position: absolute;
-    bottom: 100px;
+    bottom: 200px;
     right: 50px;
     z-index: 1;
 }
@@ -36,6 +40,6 @@ section.section--active{
     box-shadow: -20px 0px 40px white;
     z-index: 3;
 }
-.detail-active{
+.detail-active {
     transform: translate(calc(-100% - 40px));
 }

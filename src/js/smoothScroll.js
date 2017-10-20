@@ -1,7 +1,7 @@
 class ObjScroll {
     constructor(){
         this.event_timeStamp    = -2500
-        this.scroll_wrapper     = document.querySelector('#smoothScroll-wrapper') // translate wrapper
+        this.scroll_wrapper     = document.querySelector('.smoothScroll-wrapper') // translate wrapper
         this.scroll_section     = document.querySelectorAll('section') // get the active section
         this.waves              = document.querySelector('.waves')
         this.sub_waves_div      = document.querySelector('.waves__subWaveDiv')
@@ -10,14 +10,14 @@ class ObjScroll {
 
     }
     listenScroll(){
-
         // Test tactile device
-        if('ontouchstart' in window){
+        if('ontouchstart' in window) {
             this.mobileListener()
         }
         this.desktopListener()
         this.buttonListener()
     }
+
     mobileListener(){
         // iphone block scroll
         window.addEventListener('scroll', (e) => {
@@ -47,10 +47,10 @@ class ObjScroll {
                 direction.orientation = parseInt(-1)
                 this.scrollAnimation(direction)
             }
-
         })
     }
-    desktopListener(){
+
+    desktopListener() {
         // Wheel (scroll)
         window.addEventListener('wheel', (e) => {
             this.scrollAnimation(this.getWheelDirection(e))
@@ -61,9 +61,10 @@ class ObjScroll {
             this.keyboardNavigation(e)
         })
     }
-    buttonListener(){
-        const previous_button    = this.scroll_wrapper.querySelectorAll('.navigation-button .previous-navigation-button')
-        const next_button        = this.scroll_wrapper.querySelectorAll('.navigation-button .next-navigation-button')
+
+    buttonListener() {
+        const previous_button    = this.scroll_wrapper.querySelectorAll('.navigation-button .navigation-button__previous')
+        const next_button        = this.scroll_wrapper.querySelectorAll('.navigation-button .navigation-button__next')
         // Button previous
         previous_button.forEach((_previous_button) => {
             _previous_button.addEventListener('click', (e) => {
@@ -71,6 +72,7 @@ class ObjScroll {
                 e.preventDefault()
             })
         })
+
         // Button next
         next_button.forEach((_next_button) => {
             _next_button.addEventListener('click', (e) => {
@@ -79,15 +81,15 @@ class ObjScroll {
             })
         })
     }
-    getWheelDirection(e){
+    getWheelDirection(e) {
         const deltaX = Math.max(-1, Math.min(1, (e.deltaX) )) // Get scroll X
         const deltaY = Math.max(-1, Math.min(1, (e.deltaY) )) // Get scroll Y
 
         // Get wheel event only every 1.5 second
-        if(e.timeStamp > (this.event_timeStamp+2500)){
+        if(e.timeStamp > (this.event_timeStamp+2500)) {
             this.event_timeStamp = e.timeStamp
             if (deltaY != 0) {
-                if(deltaY > 0){
+                if(deltaY > 0) {
                     this.nextSection()
                 }
                 else {
@@ -99,33 +101,33 @@ class ObjScroll {
             return false
         }
     }
-    keyboardNavigation(e){
+    keyboardNavigation(e) {
         // Down
-        if(e.keyCode == 40 ){
+        if(e.keyCode == 40 ) {
             this.nextSection()
         }
         // Up
-        else if(e.keyCode == 38 ){
+        else if(e.keyCode == 38 ) {
             this.previousSection()
         }
     }
 
-    nextSection(){
+    nextSection() {
         let direction = {}
         direction.axe = "y"
         direction.orientation = parseInt(1)
         this.scrollAnimation(direction)
     }
-    previousSection(){
+    previousSection() {
         let direction = {}
         direction.axe = "y"
         direction.orientation = parseInt(-1)
         this.scrollAnimation(direction)
     }
 
-    scrollAnimation(direction){
+    scrollAnimation(direction) {
         // scroll Y
-        if (direction && direction.axe == 'y'){
+        if (direction && direction.axe == 'y') {
             const section_active = document.querySelector('.section--active') //get active section
             const current_section = this.current_section + direction.orientation // get the next of translate
 
