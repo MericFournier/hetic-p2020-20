@@ -29,6 +29,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
+    "gulp-srcset": "^1.1.0",
+    "gulp-sugar-srcset": "^0.4.0",
     "gulp-uglify": "^3.0.0",
     "sourcemap": "^0.1.0",
     "vinyl-buffer": "^1.0.0",

@@ -3,7 +3,9 @@ class Bubble{
         this.container      = document.querySelector('.bubbles')
         this.count          = 0
         this.bubbles        = []
-        this.bubbleNumber   = 10
+        this.bubbleNumber   = 20
+        this.bubbleSizeMin  = 8
+        this.bubbleSizeMax  = 18
     }
     aleat(min,max){
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -30,7 +32,7 @@ class Bubble{
             // create Bubble
             if(this.bubbles.length < this.bubbleNumber) {
                 var i = this.bubbles.length
-                const diameter                          = this.aleat(5,15)+ "px"
+                const diameter                          = this.aleat( this.bubbleSizeMin, this.bubbleSizeMax)+ "px"
                 const left                              = this.aleat(0,100) + "vw"
                 const duration                          = this.aleat(1200,10000)
                 const delay                             = this.aleat(100,100)

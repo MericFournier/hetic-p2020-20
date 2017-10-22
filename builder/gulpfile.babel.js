@@ -48,6 +48,8 @@ import browser_sync  from 'browser-sync'
 import plumber       from 'gulp-plumber'
 import gulp_notify   from 'gulp-notify'
 import connect       from 'gulp-connect-php'
+import srcset        from 'gulp-srcset'
+import sugar_srcset  from 'gulp-sugar-srcset'
 
 var onError = function (err) {
     gulp_notify({
@@ -63,6 +65,7 @@ var onError = function (err) {
 /* Vues */
 const pages = () => {
     return  gulp.src( [ config.page.src] )
+            .pipe(sugar_srcset())
             .pipe(gulp.dest(config.page.dest))
  }
 
@@ -70,6 +73,10 @@ const pages = () => {
 const img = () => {
     return  gulp.src( [ config.images.src ] )
             .pipe(imagemin())
+            .pipe(srcset([{
+                match:  '(min-width: 320px)',
+                width:  [1, 1920, 1280, 720, 560, 320],
+            }]))
             .pipe(gulp.dest( config.images.dest ))
 }
 

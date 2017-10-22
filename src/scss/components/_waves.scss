@@ -24,7 +24,7 @@
 }
 
 .waves__waveFirst{
-    animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    animation: wave 3.9s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
     z-index: 2;
 }
 
@@ -35,7 +35,7 @@
 
 .waves__waveSecond{
     top: -140px;
-    animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.25s infinite;
+    animation: wave 3.9s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.25s infinite;
     z-index: 1;
 }
 
@@ -194,7 +194,7 @@
     .waves__waveSecond {
         fill: #E08C97;
     }
-    
+
     .waves__subWaveDiv {
         background: #B7304B;
     }
