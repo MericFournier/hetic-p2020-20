@@ -17,25 +17,30 @@
 
 .waves__waveFirst, .waves__waveSecond{
     position: absolute;
-    width: 200vw;
-    top: -130px;
     left: 0;
+    width: 2000px;
     will-change: transform;
+
+    @media (min-width: 700px){
+        width: 200vw;
+    }
 }
 
 .waves__waveFirst{
-    animation: wave 3.9s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    animation: wave 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
     z-index: 2;
+    top: -130px;
 }
 
 .waves__containerWaveSecond{
     animation: swell 7s ease -1.25s infinite;
     will-change: transform;
+    top: -140px;
 }
 
 .waves__waveSecond{
-    top: -140px;
-    animation: wave 3.9s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.25s infinite;
+    top: -150px;
+    animation: wave 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.25s infinite;
     z-index: 1;
 }
 
@@ -48,12 +53,12 @@
 
 @keyframes wave {
       from   { transform: translate(0)}
-      to     { transform: translate(-100vw)}
+      to     { transform: translate(-50%)}
 }
 
 @keyframes swell {
     0%, 100% {transform: translate(0,0px);}
-    50%      {transform: translate(0,10px);}
+    50%      {transform: translate(0,-10px);}
 }
 
 /*
