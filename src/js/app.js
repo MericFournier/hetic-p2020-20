@@ -11,11 +11,11 @@ import Bubble from './bubble';
 //var anchor = new Anchor()
 
 // Scroll activation
-var scroll = new ObjScroll()
+let scroll = new ObjScroll()
 scroll.listenScroll()
 
 // var detail = new DetailBottle()
 // detail.buttonListener()
 
-var bubbless = new Bubble()
+let bubbless = new Bubble()
 bubbless.createBubble()
