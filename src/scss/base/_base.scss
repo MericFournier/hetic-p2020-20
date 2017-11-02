@@ -39,10 +39,10 @@ p {
  * Fix class
  */
 
-.overflow-body-fix-for-iphone {
-    height: 100%;
+.body {
     width: 100%;
-    overflow: hidden;
+    min-height: 100%;
+    position: relative;
 }
 
 .smoothScroll-wrapper {

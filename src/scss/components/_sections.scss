@@ -1,6 +1,6 @@
 section.section{
     position: relative;
-    width: 100vw;
+    min-width: 100vw;
     height: 100vh;
     overflow: hidden;
     display: none;
@@ -22,4 +22,8 @@ section.section--active {
     height: 70vh;
     top: 10vh;
     right: 100%;
+}
+
+section.section_home{
+    height: 1000px;
 }

@@ -142,7 +142,7 @@ class ObjScroll {
                 }
                 // scroll previous
                 else if (direction.orientation < 0) {
-                    this.waves.style.animation = "transitionPage 2s reverse"
+                    this.waves.style.animation = "transitionPage 2s cubic-bezier(0.82, 0.24, 0.83, 1.1) reverse"
                 }
 
 
