@@ -1,0 +1,28 @@
+.section_home {
+    background: #F99E36;
+}
+
+.section_home__logo {
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 50vh;
+    left: 50vw;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.section_home__logo-img {
+    width: 90%;
+}
+
+.section_home__logo-title {
+    position: absolute;
+    bottom: 22%;
+    left: 36%;
+    background-color: #79BE23;
+    color: white;
+    font-size: 4vw;
+    padding: 5px 10px;
+    transform: rotate(-7deg);
+    font-family: 'FantaPlayful', serif;
+}
