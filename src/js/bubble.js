@@ -20,10 +20,10 @@ class Bubble{
         window.setInterval(() => {
 
             // Remove Buddle out screen
-            for (var i = 0; i < this.bubbles.length; i++) {
-                var delay = parseInt(this.bubbles[i].style.animationDelay)
-                var duration = parseInt(this.bubbles[i].style.animationDuration)
-                var end = this.bubbles[i].timestamp + delay + duration
+            for (let i = 0; i < this.bubbles.length; i++) {
+                let delay = parseInt(this.bubbles[i].style.animationDelay)
+                let duration = parseInt(this.bubbles[i].style.animationDuration)
+                let end = this.bubbles[i].timestamp + delay + duration
                 if(this.bubbles[i].timestamp + delay + duration < new Date()){
                     this.container.removeChild(this.bubbles[i])
                     this.bubbles.splice(i , 1);
@@ -31,7 +31,7 @@ class Bubble{
             }
             // create Bubble
             if(this.bubbles.length < this.bubbleNumber) {
-                var i = this.bubbles.length
+                let i = this.bubbles.length
                 const diameter                          = this.aleat( this.bubbleSizeMin, this.bubbleSizeMax)+ "px"
                 const left                              = this.aleat(0,100) + "vw"
                 const duration                          = this.aleat(1200,10000)
