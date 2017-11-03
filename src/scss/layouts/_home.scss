@@ -1,7 +1,3 @@
-.section_home {
-    background: #F99E36;
-}
-
 .section_home__logo {
     position: absolute;
     width: 100vw;
@@ -13,16 +9,24 @@
 
 .section_home__logo-img {
     width: 90%;
+
+    @media (min-width: 778px) {
+        width: 700px;
+    }
 }
 
 .section_home__logo-title {
     position: absolute;
-    bottom: 22%;
-    left: 36%;
+    bottom: 17%;
+    left: 26%;
     background-color: #79BE23;
     color: white;
-    font-size: 4vw;
-    padding: 5px 10px;
+    font-size: 4.5vw;
+    padding: 5px 15px;
     transform: rotate(-7deg);
     font-family: 'FantaPlayful', serif;
+
+    @media (min-width: 778px) {
+        font-size: 35px;
+    }
 }
