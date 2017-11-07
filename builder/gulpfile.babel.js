@@ -69,13 +69,12 @@ var onError = function (err) {
 /* Vues */
 const pages = () => {
     return  gulp.src( [ config.page.src] )
-            .pipe(sugar_srcset({
-                responsive : {suffix :'@[match]w'}
-            }))
-            .pipe(gulp.dest(config.page.dest))
-    }
-
+        .pipe(sugar_srcset({
+            responsive : {suffix :'@[match]w'}
+        }))
+        .pipe(gulp.dest(config.page.dest))
 }
+
 
 /* Images*/
 const img = () => {
