@@ -5,6 +5,10 @@
     top: 50vh;
     left: 50vw;
     transform: translateX(-50%) translateY(-50%);
+
+    @media (min-width: 778px) {
+        width: auto;
+    }
 }
 
 .section_home__logo-img {
