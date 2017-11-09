@@ -1,25 +1,11 @@
-section.section{
-    position: relative;
-    min-width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: none;
+section{
+   position: relative;
+   min-width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+   display: none;
 }
 
-section.section--active {
-    display: block;
-}
-
-.navigation-button{
-    position: absolute;
-    bottom: 200px;
-    right: 50px;
-    z-index: 1;
-}
-
-.bottle{
-    position: absolute;
-    height: 70vh;
-    top: 10vh;
-    right: 100%;
+.section--active {
+   display:block;
 }
