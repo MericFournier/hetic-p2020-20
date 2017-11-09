@@ -25,6 +25,10 @@ const config = {
         app     : '../src/js/app.js',
         dest    :  '../dist/js'
     },
+    fonts   : {
+        src     : '../src/fonts/**',
+        dest    :  '../dist/fonts'
+    },
     server  : '../dist/',
 }
 
@@ -65,9 +69,12 @@ var onError = function (err) {
 /* Vues */
 const pages = () => {
     return  gulp.src( [ config.page.src] )
-            .pipe(sugar_srcset())
-            .pipe(gulp.dest(config.page.dest))
- }
+        .pipe(sugar_srcset({
+            responsive : {suffix :'@[match]w'}
+        }))
+        .pipe(gulp.dest(config.page.dest))
+}
+
 
 /* Images*/
 const img = () => {
@@ -79,6 +86,14 @@ const img = () => {
             }]))
             .pipe(gulp.dest( config.images.dest ))
 }
+
+
+/* Fonts */
+const fonts = () => {
+    return  gulp.src( [ config.fonts.src] )
+            .pipe(gulp.dest(config.fonts.dest))
+ }
+
 
 /*  Sounds */
 const sound = () =>{
@@ -152,5 +167,5 @@ const watchTask = () => {
     gulp.watch ( config.page.src    , gulp.parallel( pages, reload) )
 }
 
-gulp.task('run', gulp.parallel(pages,img, js , css, sound, watchTask, server))
-gulp.task('default', gulp.parallel(pages,img, js , css, sound))
+gulp.task('run', gulp.parallel(pages,img, js , css, sound, fonts, watchTask, server))
+gulp.task('default', gulp.parallel(pages,img, js , css, fonts, sound))

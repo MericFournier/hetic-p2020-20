@@ -1,8 +1,8 @@
-import ObjScroll from './smoothScroll';
+import ObjScroll from './smoothScroll'
 
-import Anchor from './urlAnchor';
+import Anchor from './urlAnchor'
 
-//import DetailBottle from './detailBottle';
+//import DetailBottle from './detailBottle'
 
 import Bubble from './bubble';
 
