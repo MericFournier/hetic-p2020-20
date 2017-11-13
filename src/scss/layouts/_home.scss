@@ -5,6 +5,10 @@
     top: 50vh;
     left: 50vw;
     transform: translateX(-50%) translateY(-50%);
+
+    @media (min-width: $tablet ) {
+        width: auto;
+    }
 }
 
 .section_home__logo-img {
@@ -26,7 +30,7 @@
     transform: rotate(-7deg);
     font-family: 'FantaPlayful', serif;
 
-    @media (min-width: 778px) {
+    @media (min-width: $tablet) {
         font-size: 35px;
     }
 }

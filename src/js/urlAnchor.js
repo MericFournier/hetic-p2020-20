@@ -2,8 +2,8 @@ class Anchor {
     constructor() {
         this.hash = window.location.hash.substr(1)
     }
-    anchorTest(){
-        if(hash){
+    anchorTest() {
+        if(hash) {
             this.section_equal_hach = document.querySelector('section[data-anchor ='+ hash +']')
             //if hash match to a section
             if(section_to_hach){
@@ -20,8 +20,7 @@ class Anchor {
                 // add class section--active to the active section
                 this.scrollY_active.classList.remove("section--active")
                 this.scroll_section[this.translate_values].classList.add('section--active')
-            }
-            else{
+            } else {
                 window.location.hash = 'acceuil'
             }
         }

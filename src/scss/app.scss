@@ -8,13 +8,11 @@
 @import 'base/reset';
 @import 'base/variables';
 @import 'base/base';
+@import 'base/fonts';
+@import 'base/typos';
+@import 'base/layout';
 
 
-/*
- * Layouts
- */
-
-// Not yet
 
 /*
  * Components
@@ -24,6 +22,8 @@
 @import 'components/waves';
 @import 'components/scroll';
 @import 'components/bubble';
+@import 'components/bottle';
+@import 'components/navigation';
 
 /*
  * Layouts

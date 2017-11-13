@@ -164,8 +164,8 @@ class ObjScroll {
                     window.setTimeout(() => {
                         // reset animation
                         this.waves.style.animation = ""
-                    },1000)
-                },1000)
+                    }, 1000)
+                }, 1000)
 
 
                 // change section
