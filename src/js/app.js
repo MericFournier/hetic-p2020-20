@@ -1,13 +1,13 @@
 import ScrollListener from './ScrollListener'
 import ScrollAnimation from './ScrollAnimation';
 import Bubble from './Bubble';
+import Anchor from './Anchor';
 
 
 // Anchor test
-//var anchor = new Anchor()
+let anchor = new Anchor()
 
 // Init scroll animation
-
 let scrollInit = (direction) => {
     let scrollAnim = new ScrollAnimation(direction)
 }
@@ -17,7 +17,7 @@ let scrollInit = (direction) => {
 let scroll = new ScrollListener(scrollInit , 1500, true)
 
 
-// var detail = new DetailBottle()
+// let detail = new DetailBottle()
 // detail.buttonListener()
 
 let bubbless = new Bubble()
