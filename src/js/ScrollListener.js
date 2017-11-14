@@ -66,7 +66,10 @@ export default class ScrollListener {
     desktopListener() {
         // Wheel (scroll)
         window.addEventListener('wheel', (e) => {
-            this.callback(this.getWheelDirection(e))
+            if (e.timeStamp > (this.event_timeStamp + this.delay)) {
+                this.event_timeStamp = e.timeStamp
+                this.callback(this.getWheelDirection(e))
+            }
         })
 
         // Keyboard
@@ -87,19 +90,15 @@ export default class ScrollListener {
         const deltaY = Math.max(-1, Math.min(1, (e.deltaY))) // Get scroll Y
 
         // Get wheel event only every 1.5 second
-        if (e.timeStamp > (this.event_timeStamp + this.delay)) {
-            this.event_timeStamp = e.timeStamp
-            if (deltaY != 0) {
-                if (deltaY > 0) {
-                    this.next()
-                }
-                else {
-                    this.previous()
-                }
+        if (deltaY != 0) {
+            let direction
+            if (deltaY > 0) {
+                direction = this.next()
             }
-        }
-        else {
-            return false
+            else {
+                direction = this.previous()
+            }
+            return direction
         }
     }
 
@@ -110,11 +109,11 @@ export default class ScrollListener {
     keyboardAction(e) {
         // Down
         if (e.keyCode == 40) {
-            this.next()
+            this.callback(this.next())
         }
         // Up
         else if (e.keyCode == 38) {
-            this.previous()
+            this.callback(this.previous())
         }
     }
 
@@ -125,7 +124,7 @@ export default class ScrollListener {
         let direction = {}
         direction.axe = "y"
         direction.orientation = parseInt(-1)
-        this.callback(direction)
+        return direction
     }
 
     /**
@@ -135,6 +134,6 @@ export default class ScrollListener {
         let direction = {}
         direction.axe = "y"
         direction.orientation = parseInt(1)
-        this.callback(direction)
+        return direction
     }
 }

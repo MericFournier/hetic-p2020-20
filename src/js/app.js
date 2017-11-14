@@ -7,15 +7,14 @@ import Bubble from './Bubble';
 //var anchor = new Anchor()
 
 // Init scroll animation
-let scrollAnim = new ScrollAnimation()
 
-
-function azerty(direction){
-    console.log(direction)
+let scrollInit = (direction) => {
+    let scrollAnim = new ScrollAnimation(direction)
 }
 
+
 // Listener Scroll
-let scroll = new ScrollListener(scrollAnim.animate, 1500, true)
+let scroll = new ScrollListener(scrollInit , 1500, true)
 
 
 // var detail = new DetailBottle()
