@@ -1,4 +1,22 @@
 @font-face {
-    font-family:'FantaPlayful';
-    src:url(/fonts/FantaPlayful-Regular.ttf);
+    font-family: 'FantaPlayful';
+    src: url(/fonts/FantaPlayful-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url(/fonts/CircularStd.oft);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'CircularStd-Book';
+    src: url(/fonts/CircularStd-Book.oft);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'CircularStd-Bold';
+    src: url(/fonts/CircularStd-Bold.oft);
+    font-weight: 700;
 }

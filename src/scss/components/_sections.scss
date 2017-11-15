@@ -1,4 +1,19 @@
-section{
+/*
+ * Dynamic style
+ */
+
+.section.orange {
+    .bottle__label--name-title {
+        color: #F99E36;
+    }
+}
+
+
+/*
+ * Static style
+ */
+
+section {
    position: relative;
    min-width: 100vw;
    height: 100vh;
@@ -7,5 +22,50 @@ section{
 }
 
 .section--active {
-   display:block;
+   display: block;
+}
+
+.bottle__label {
+    transform: translateY(20vh);
+    width: 80vw;
+    margin: 0 auto;
+    padding: 20px 0 20px 20%;
+    background-color: white;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
+}
+
+.bottle__label--name {
+    margin-bottom: 20px;
+    line-height: 38px;
+    font-size: 30px;
+    font-family: 'CircularStd-Book', serif;
+    text-transform: uppercase;
+    color: $dark-blue;
+}
+
+.bottle__label--name-title {
+    font-size: 38px;
+    font-family: 'CircularStd-Bold', serif;
+}
+
+.bottle__label--button {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-family: 'CircularStd-Bold', serif;
+    text-transform: uppercase;
+    color: $dark-blue;
+    padding: 10px 15px;
+    border: 2px solid $dark-blue;
+    transition: background .3s ease-out, color .3s ease-out, transform .3s ease-out;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        color: white;
+        background-color: $dark-blue;
+    }
 }
