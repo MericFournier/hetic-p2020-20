@@ -5,7 +5,7 @@
 .waves{
     position: absolute;
     width: 100vw;
-    top: 100;
+    top: 100%;
     left: 0;
     transition: top 2s;
 }
@@ -78,7 +78,7 @@
 * Wave color
 */
 
-.waves__acceuil, .waves__orange {
+.waves__acceuil, .waves__color--orange {
     .waves__wave--waveFirst {
       fill: #FFFFFF;
     }
@@ -88,7 +88,7 @@
     }
 }
 
-.waves__citron--frappe {
+.waves__color--citron-frappe {
     .waves__wave--waveFirst {
       fill: #FFD33A;
     }
@@ -98,7 +98,7 @@
     }
 }
 
-.waves__fraise--kiwi {
+.waves__color--fraise-kiwi {
     .waves__wave--waveFirst {
         fill: #E31F33;
     }
@@ -112,7 +112,7 @@
     }
 }
 
-.waves__ananas--citron {
+.waves__color--ananas-citron {
     .waves__wave--waveFirst {
         fill: #F9C445;
     }
@@ -126,7 +126,7 @@
     }
 }
 
-.waves__pomme--cerise {
+.waves__color--pomme-cerise {
     .waves__wave--waveFirst {
         fill: #DD3831;
     }
@@ -140,7 +140,7 @@
     }
 }
 
-.waves__exotique {
+.waves__color--exotique {
     .waves__wave--waveFirst {
         fill: #F39526;
     }
@@ -154,7 +154,7 @@
     }
 }
 
-.waves__cassis {
+.waves__color--cassis {
     .waves__wave--waveFirst {
         fill: #810F1F;
     }
@@ -168,7 +168,7 @@
     }
 }
 
-.waves__peche--abricot {
+.waves__color--peche-abricot {
     .waves__wave--waveFirst {
         fill: #F0AE13;
     }
@@ -182,7 +182,7 @@
     }
 }
 
-.waves__framboise--passion {
+.waves__color--framboise-passion {
     .waves__wave--waveFirst {
         fill: #B7304B;
     }

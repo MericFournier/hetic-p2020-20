@@ -9,6 +9,7 @@ export default class ScrollAnimation {
     this.bubbles = document.querySelector('.bubbles')
     this.direction = direction
     this.animation_duration = '1.5'
+    this.last_anchor = window.location.hash.substr(1)
 
     // launch the animation
     this.initAnimation()
@@ -56,5 +57,16 @@ export default class ScrollAnimation {
   setAnchor() {
     this.next_anchor = this.next_section.getAttribute('data-anchor')
     window.location.hash = this.next_anchor // Anchor in url
+
+    this.setColorPage()
+  }
+  setColorPage() {
+    // waves
+    this.waves.classList.remove(`bubbles__color--${this.last_anchor}`)
+    this.waves.classList.add(`bubbles__color--${this.next_anchor}`)
+
+    // bubbles
+    this.bubbles.classList.remove(`bubbles__color--${this.last_anchor}`)
+    this.bubbles.classList.add(`bubbles__color--${this.next_anchor}`)
   }
 }
