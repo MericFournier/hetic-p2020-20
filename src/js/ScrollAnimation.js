@@ -8,7 +8,7 @@ export default class ScrollAnimation {
     this.waves = document.querySelector('.waves')
     this.bubbles = document.querySelector('.bubbles')
     this.direction = direction
-    this.animation_duration = '2'
+    this.animation_duration = '1.5'
 
     // launch the animation
     this.initAnimation()
