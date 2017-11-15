@@ -65,9 +65,11 @@ export default class ScrollListener {
   desktopListener() {
     // Wheel (scroll)
     window.addEventListener('wheel', (e) => {
-      if (e.timeStamp > (this.event_timeStamp + this.delay)) {
-        this.event_timeStamp = e.timeStamp
-        this.callback(this.getWheelDirection(e))
+      if (e.deltaY >= 10 || e.deltaY <= -10) {
+        if (e.timeStamp > (this.event_timeStamp + this.delay)) {
+          this.event_timeStamp = e.timeStamp
+          this.callback(this.getWheelDirection(e))
+        }
       }
     })
 
@@ -82,7 +84,6 @@ export default class ScrollListener {
   /**
      * Function that gonna return the direction of the wheel for the desktop
      * @param {event} e - The wheel event
-     * @returns {boolean} return false if delay is less than this.delay
      */
   getWheelDirection(e) {
     /* const deltaX = Math.max(-1, Math.min(1, (e.deltaX))) // Get scroll X */
