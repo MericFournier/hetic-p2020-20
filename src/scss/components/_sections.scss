@@ -36,22 +36,26 @@ section {
 
 .bottle__label--name {
     margin-bottom: 20px;
-    line-height: 38px;
-    font-size: 30px;
+    line-height: 12vw;
+    font-size: 9.5vw;
     font-family: 'CircularStd-Book', serif;
     text-transform: uppercase;
     color: $dark-blue;
+
+    @media (min-width: $tablet) {
+        width: auto;
+    }
 }
 
 .bottle__label--name-title {
-    font-size: 38px;
+    font-size: 12vw;
     font-family: 'CircularStd-Bold', serif;
 }
 
 .bottle__label--button {
     display: inline-block;
     margin-bottom: 5px;
-    font-size: 13px;
+    font-size: 4.1vw;
     font-family: 'CircularStd-Bold', serif;
     text-transform: uppercase;
     color: $dark-blue;
@@ -59,6 +63,7 @@ section {
     border: 2px solid $dark-blue;
     transition: background .3s ease-out, color .3s ease-out, transform .3s ease-out;
     cursor: pointer;
+    user-select: none;
 
     &:hover {
         transform: scale(1.1);
