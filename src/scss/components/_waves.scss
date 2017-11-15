@@ -88,6 +88,16 @@
     }
 }
 
+.waves__color--orange {
+    .waves__wave--waveFirst {
+      fill: #F99E36;
+    }
+
+    .waves__wave--waveSecond {
+      fill: #FBC17F;
+    }
+}
+
 .waves__color--citron-frappe {
     .waves__wave--waveFirst {
       fill: #FFD33A;

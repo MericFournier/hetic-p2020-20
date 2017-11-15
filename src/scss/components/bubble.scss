@@ -32,8 +32,6 @@
 }
 
 
-
-
 .bubbles__color--accueil, .bubbles__color--orange {
    background: #F99E36;
 
@@ -42,7 +40,7 @@
    }
 }
 
-.bubbles__color--citron-frappe {
+.bubbles__color--orange {
     background: white;
 
     .bulle {
@@ -50,10 +48,12 @@
     }
 }
 
-.bubbles__citron-frappe {
-   .bulle {
-      background: #FFEB85;
-   }
+.bubbles__color--citron-frappe {
+    background: white;
+
+    .bulle {
+       background: #fbeb7f;
+    }
 }
 
 .bubbles__color--fraise-kiwi {
