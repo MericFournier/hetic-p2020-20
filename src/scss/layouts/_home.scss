@@ -22,16 +22,15 @@
 .section_home__logo-title {
     position: absolute;
     bottom: 15%;
-    left: 26%;
+    left: 20%;
     background-color: #79BE23;
     color: white;
-    font-size: 4.5vw;
+    font-size: 4.8vw;
     padding: 5px 15px;
     transform: rotate(-7deg);
     font-family: 'FantaPlayful', serif;
 
     @media (min-width: $tablet) {
-        font-size: 35px;
-        left: 20%;
+        font-size: 30px;
     }
 }
