@@ -78,13 +78,23 @@
 * Wave color
 */
 
-.waves__acceuil, .waves__color--orange {
+.waves__acceuil {
     .waves__wave--waveFirst {
       fill: #FFFFFF;
     }
 
     .waves__wave--waveSecond {
       fill: rgba(#ffffff, 0.6);
+    }
+}
+
+.waves__color--orange {
+    .waves__wave--waveFirst {
+      fill: #F99E36;
+    }
+
+    .waves__wave--waveSecond {
+      fill: #FBC17F;
     }
 }
 
