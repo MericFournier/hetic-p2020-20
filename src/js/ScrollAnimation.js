@@ -62,8 +62,8 @@ export default class ScrollAnimation {
   }
   setColorPage() {
     // waves
-    this.waves.classList.remove(`bubbles__color--${this.last_anchor}`)
-    this.waves.classList.add(`bubbles__color--${this.next_anchor}`)
+    this.waves.classList.remove(`waves__color--${this.last_anchor}`)
+    this.waves.classList.add(`waves__color--${this.next_anchor}`)
 
     // bubbles
     this.bubbles.classList.remove(`bubbles__color--${this.last_anchor}`)
