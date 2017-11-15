@@ -1,6 +1,13 @@
 {
-  "extends": "airbnb",
+  "extends": "airbnb-base",
   "rules": {
-    "func-names": ["error", "never"]
+    "semi": [2, "never"],
+    "no-console": 0,
+    "comma-dangle": ["error", "always"],
+    "prefer-template": "error"
+  },
+  "globals": {
+    "document": true,
+    "window": true
   }
 }
