@@ -7,7 +7,7 @@ class Anchor {
   }
   anchorTest() {
     if (this.current_hash) {
-      this.section_equal_hach = document.querySelector(`section[data-anchor =\${${this.current_hash}}]`)
+      this.section_equal_hach = document.querySelector(`section[data-anchor =${this.current_hash}]`)
       // if hash match to a section
       if (this.section_equal_hach) {
         this.active_section.classList.remove('section--active')

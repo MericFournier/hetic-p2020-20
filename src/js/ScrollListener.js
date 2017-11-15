@@ -84,7 +84,7 @@ export default class ScrollListener {
      * @param {event} e - The wheel event
      * @returns {boolean} return false if delay is less than this.delay
      */
-  static getWheelDirection(e) {
+  getWheelDirection(e) {
     /* const deltaX = Math.max(-1, Math.min(1, (e.deltaX))) // Get scroll X */
     const deltaY = Math.max(-1, Math.min(1, (e.deltaY))) // Get scroll Y
 
