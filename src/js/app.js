@@ -3,22 +3,22 @@ import ScrollAnimation from './ScrollAnimation'
 import Bubble from './Bubble'
 import Anchor from './Anchor'
 
+window.addEventListener('load', () => {
+  // Anchor test
+  const anchor = new Anchor()
 
-// Anchor test
-const anchor = new Anchor()
+  // Init scroll animation
+  const scrollInit = (direction) => {
+    const scrollAnim = new ScrollAnimation(direction)
+  }
 
-// Init scroll animation
-const scrollInit = (direction) => {
-  const scrollAnim = new ScrollAnimation(direction)
-}
-
-
-// Listener Scroll
-const scroll = new ScrollListener(scrollInit, 1500, true)
+  // Listener Scroll
+  const scroll = new ScrollListener(scrollInit, 1500, true)
 
 
-// let detail = new DetailBottle()
-// detail.buttonListener()
+  // let detail = new DetailBottle()
+  // detail.buttonListener()
 
-const bubbles = new Bubble()
-bubbles.createBubble()
+  const bubbles = new Bubble()
+  bubbles.createBubble()
+})
