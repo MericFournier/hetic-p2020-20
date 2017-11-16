@@ -8,6 +8,10 @@
     top: 100%;
     left: 0;
     transition: top 2s;
+
+    @media (min-width: $tablet) {
+        top: 107%;
+    }
 }
 
 .waves--active{
@@ -21,7 +25,7 @@
     width: 2000px;
     will-change: transform;
 
-    @media (min-width: 700px){
+    @media (min-width: 700px) {
         width: 200vw;
     }
 }
@@ -99,7 +103,7 @@
     }
 
     .waves__wave--waveSecond {
-      fill: #FBC17F;
+      fill: rgba(#FBC17F, 0.6);
     }
 
     .waves__wave--subWaveDiv{
