@@ -26,7 +26,7 @@ section {
 }
 
 .bottle__label {
-    transform: translateY(18vh);
+    transform: translateY(20vh);
     width: 80vw;
     margin: 0 auto;
     padding: 20px 0 20px 20%;
@@ -34,8 +34,9 @@ section {
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
 
     @media (min-width: $tablet) {
-        width: 70vw;
-        padding: 30px 0 40px 20%;
+        transform: translateY(18vh);
+        width: 55vw;
+        padding: 30px 0 40px 14%;
     }
 }
 
@@ -86,5 +87,18 @@ section {
     &:active {
         color: white;
         background-color: $dark-blue;
+    }
+}
+
+.bottle__img {
+    position: absolute;
+    width: 37vw;
+    transform: translateX(-62%) translateY(-14%) rotate(7deg);
+    left: 0;
+    top: 0;
+
+    @media (min-width: $tablet) {
+        width: 20vw;
+        transform: translateX(-69%) translateY(-13%) rotate(17.8deg);
     }
 }
