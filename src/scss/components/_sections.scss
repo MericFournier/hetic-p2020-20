@@ -26,12 +26,17 @@ section {
 }
 
 .bottle__label {
-    transform: translateY(20vh);
+    transform: translateY(18vh);
     width: 80vw;
     margin: 0 auto;
     padding: 20px 0 20px 20%;
     background-color: white;
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
+
+    @media (min-width: $tablet) {
+        width: 70vw;
+        padding: 30px 0 40px 20%;
+    }
 }
 
 .bottle__label--name {
@@ -43,13 +48,18 @@ section {
     color: $dark-blue;
 
     @media (min-width: $tablet) {
-        width: auto;
+        font-size: 5.5vw;
+        line-height: 7vw;
     }
 }
 
 .bottle__label--name-title {
     font-size: 12vw;
     font-family: 'CircularStd-Bold', serif;
+
+    @media (min-width: $tablet) {
+        font-size: 7vw;
+    }
 }
 
 .bottle__label--button {
@@ -64,6 +74,10 @@ section {
     transition: background .3s ease-out, color .3s ease-out, transform .3s ease-out;
     cursor: pointer;
     user-select: none;
+
+    @media (min-width: $tablet) {
+        font-size: 1.5vw;
+    }
 
     &:hover {
         transform: scale(1.1);
