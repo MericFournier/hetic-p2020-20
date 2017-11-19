@@ -119,3 +119,33 @@ section {
     transform: translateY(90px) translateX(-60px);
     width: 300px;
 }
+
+.swiper__circle {
+    position: absolute;;
+    width: 85px;
+    height: 85px;
+    border: 2px dashed #666ADE;
+    border-radius: 1000px;
+    cursor: pointer;
+
+    &:active {
+        border: 2px solid #666ADE;
+    }
+}
+
+.swiper__circle--centerCircle {
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #666ADE;
+    border-radius: 1000px;
+}
+
+.swiper__arrow {
+    width: 180px;
+    margin-top: 30px;
+    margin-left: 120px;
+}
