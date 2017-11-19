@@ -31,6 +31,7 @@ section {
 }
 
 .bottle__label {
+    position: relative;
     transform: translateY(20vh);
     width: 80vw;
     margin: 0 auto;
@@ -107,4 +108,10 @@ section {
         width: 22vw;
         transform: translateX(-69%) translateY(-16%) rotate(21.8deg)
     }
+}
+
+.swiper {
+    position: absolute;
+    transform: translateY(90px) translateX(-60px);
+    width: 300px;
 }
