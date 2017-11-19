@@ -95,6 +95,10 @@ section {
     &:hover {
         transform: scale(1.1);
     }
+
+    &:active {
+        transform: scale(1.07);
+    }
 }
 
 .bottle__img {
