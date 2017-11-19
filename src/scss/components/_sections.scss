@@ -105,6 +105,7 @@ section {
     position: absolute;
     width: 37vw;
     transform: translateX(-62%) translateY(-14%) rotate(7deg);
+    transition: transform 1s ease-in-out;
     left: 0;
     top: 0;
 
@@ -129,12 +130,18 @@ section {
     height: 60px;
     border: 1.8px dashed #666ADE;
     border-radius: 1000px;
+    transform: rotate(-12deg);
+    transition: transform .2s ease-out;
     cursor: pointer;
 
     @media (min-width: $tablet) {
         width: 85px;
         height: 85px;
         border: 2px dashed #666ADE;
+    }
+
+    &:hover {
+        transform: rotate(0deg);
     }
 
     &:active {
