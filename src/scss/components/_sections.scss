@@ -3,8 +3,13 @@
  */
 
 .section.orange {
-    .bottle__label--name-title {
+    .bottle__label--title {
         color: #F99E36;
+    }
+
+    .bottle__label--button {
+        color: #F99E36;
+        box-shadow: 0px 2px 4px 0px rgba(249, 158, 54, 0.5);
     }
 }
 
@@ -26,12 +31,13 @@ section {
 }
 
 .bottle__label {
+    position: relative;
     transform: translateY(20vh);
     width: 80vw;
     margin: 0 auto;
     padding: 20px 0 20px 20%;
     background-color: white;
-    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 1px 6px 0px #E0E0E0;
 
     @media (min-width: $tablet) {
         transform: translateY(18vh);
@@ -41,25 +47,30 @@ section {
 }
 
 .bottle__label--name {
-    margin-bottom: 20px;
-    line-height: 12vw;
-    font-size: 9.5vw;
-    font-family: 'CircularStd', serif;
+    font-size: 8vw;
+    letter-spacing: 0.01em;
+    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     color: $dark-blue;
 
     @media (min-width: $tablet) {
-        font-size: 5.5vw;
-        line-height: 7vw;
+        font-size: 4vw;
     }
 }
 
-.bottle__label--name-title {
-    font-size: 12vw;
-    font-family: 'CircularStd', serif;
+.bottle__label--title {
+    margin-bottom: 25px;
+    margin-top: 5px;
+    min-height: 40px;
+    font-size: 10vw;
+    letter-spacing: 0.01em;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
     font-weight: bold;
+
     @media (min-width: $tablet) {
-        font-size: 7vw;
+        font-size: 6vw;
+        min-height: 90px;
     }
 }
 
@@ -67,18 +78,18 @@ section {
     display: inline-block;
     margin-bottom: 5px;
     font-size: 4.1vw;
-    font-family: 'CircularStd', serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    color: $dark-blue;
     padding: 10px 15px;
-    border: 2px solid $dark-blue;
+    border-radius: 1000px;
     transition: background .3s ease-out, color .3s ease-out, transform .3s ease-out;
     cursor: pointer;
     user-select: none;
 
     @media (min-width: $tablet) {
         font-size: 1.5vw;
+        padding: 20px 35px;
     }
 
     &:hover {
@@ -86,8 +97,7 @@ section {
     }
 
     &:active {
-        color: white;
-        background-color: $dark-blue;
+        transform: scale(1.07);
     }
 }
 
@@ -102,4 +112,10 @@ section {
         width: 22vw;
         transform: translateX(-69%) translateY(-16%) rotate(21.8deg)
     }
+}
+
+.swiper {
+    position: absolute;
+    transform: translateY(90px) translateX(-60px);
+    width: 300px;
 }
