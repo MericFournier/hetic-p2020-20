@@ -2,7 +2,7 @@ import ScrollListener from './ScrollListener'
 import ScrollAnimation from './ScrollAnimation'
 import Bubble from './Bubble'
 import Anchor from './Anchor'
-import Draggable from './Draggable'
+import ListenDrag from './ListenDrag'
 
 
 window.addEventListener('load', () => {
@@ -22,6 +22,9 @@ window.addEventListener('load', () => {
   bubbles.createBubble()
 })
 
+const drag = new ListenDrag()
+
+/*
 const element = document.querySelector('.swiper__circle')
 const options = {
   grid: 200,
@@ -32,8 +35,8 @@ const options = {
   smoothDrag: true,
   onDrag: (drag, e) => {
     if (e >= 200) {
-      console.log('azertyu')
     }
   },
 }
-new Draggable(element, options)
+
+*/
