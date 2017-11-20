@@ -133,6 +133,7 @@ section {
     transform: rotate(-12deg);
     transition: transform .2s ease-out;
     cursor: pointer;
+    transition: left 0.15s;
 
     @media (min-width: $tablet) {
         width: 85px;
