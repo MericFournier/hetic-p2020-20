@@ -50,8 +50,19 @@ export default class ScrollAnimation {
     this.changeSection()
   }
   changeSection() {
-    this.current_section.classList.remove('section--active')
-    this.next_section.classList.add('section--active')
+    console.log(this.direction)
+    if (this.direction.orientation === 1) {
+      window.setTimeout(() => {
+        this.current_section.classList.remove('section--active')
+        this.next_section.classList.add('section--active')
+      }, 200)
+    }
+    else {
+      window.setTimeout(() => {
+        this.current_section.classList.remove('section--active')
+        this.next_section.classList.add('section--active')
+      }, 1050)
+    }
     this.setAnchor()
   }
   setAnchor() {
@@ -61,12 +72,24 @@ export default class ScrollAnimation {
     this.setColorPage()
   }
   setColorPage() {
-    // waves
-    this.waves.classList.remove(`waves__color--${this.last_anchor}`)
-    this.waves.classList.add(`waves__color--${this.next_anchor}`)
+    window.setTimeout(() => {
+      // waves
+      this.waves.classList.remove(`waves__color--${this.last_anchor}`)
+      this.waves.classList.add(`waves__color--${this.next_anchor}`)
+    }, 800)
 
-    // bubbles
-    this.bubbles.classList.remove(`bubbles__color--${this.last_anchor}`)
-    this.bubbles.classList.add(`bubbles__color--${this.next_anchor}`)
-  }
+    if(this.direction.orientation === -1)
+      window.setTimeout(() => {
+        // bubbles
+        this.bubbles.classList.remove(`bubbles__color--${this.last_anchor}`)
+        this.bubbles.classList.add(`bubbles__color--${this.next_anchor}`)
+      }, 1000)
+    else
+      window.setTimeout(() => {
+        // bubbles
+        this.bubbles.classList.remove(`bubbles__color--${this.last_anchor}`)
+        this.bubbles.classList.add(`bubbles__color--${this.next_anchor}`)
+      }, 200)
+
+}
 }
