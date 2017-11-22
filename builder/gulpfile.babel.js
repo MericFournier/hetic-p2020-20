@@ -1,3 +1,26 @@
+/* Dependencies */
+import gulp          from 'gulp'
+import css_nano      from 'gulp-cssnano'
+import rename        from 'gulp-rename'
+import sass          from 'gulp-sass'
+import autoprefixer  from 'gulp-autoprefixer'
+import concat        from 'gulp-concat'
+import imagemin      from 'gulp-imagemin'
+import uglify        from 'gulp-uglify'
+import sourcemaps    from 'gulp-sourcemaps'
+import browserify    from 'browserify'
+import babelify      from 'babelify'
+import babel         from 'gulp-babel'
+import source        from 'vinyl-source-stream'
+import buffer        from 'vinyl-buffer'
+import browser_sync  from 'browser-sync'
+import plumber       from 'gulp-plumber'
+import gulp_notify   from 'gulp-notify'
+import connect       from 'gulp-connect-php'
+import srcset        from 'gulp-srcset'
+import sugar_srcset  from 'gulp-sugar-srcset'
+
+
 'use strict'
 
 /* Configurations */
@@ -29,31 +52,18 @@ const config = {
         src     : '../src/fonts/**',
         dest    :  '../dist/fonts'
     },
+    htaccess   : {
+        src     : '../src/.htaccess',
+        dest    :  '../dist/',
+    },
     server  : '../dist/',
 }
 
 
-/* Dependencies */
-import gulp          from 'gulp'
-import css_nano      from 'gulp-cssnano'
-import rename        from 'gulp-rename'
-import sass          from 'gulp-sass'
-import autoprefixer  from 'gulp-autoprefixer'
-import concat        from 'gulp-concat'
-import imagemin      from 'gulp-imagemin'
-import uglify        from 'gulp-uglify'
-import sourcemaps    from 'gulp-sourcemaps'
-import browserify    from 'browserify'
-import babelify      from 'babelify'
-import babel         from 'gulp-babel'
-import source        from 'vinyl-source-stream'
-import buffer        from 'vinyl-buffer'
-import browser_sync  from 'browser-sync'
-import plumber       from 'gulp-plumber'
-import gulp_notify   from 'gulp-notify'
-import connect       from 'gulp-connect-php'
-import srcset        from 'gulp-srcset'
-import sugar_srcset  from 'gulp-sugar-srcset'
+/* htaccess */
+const htaccess = () => gulp.src([config.htaccess.src])
+    .pipe(gulp.dest(config.htaccess.dest))
+
 
 var onError = function (err) {
     gulp_notify({
@@ -167,5 +177,5 @@ const watchTask = () => {
     gulp.watch ( config.page.src    , gulp.parallel( pages, reload) )
 }
 
-gulp.task('run', gulp.parallel(pages,img, js , css, sound, fonts, watchTask, server))
-gulp.task('default', gulp.parallel(pages,img, js , css, fonts, sound))
+gulp.task('run', gulp.parallel(htaccess, pages, img, js , css, sound, fonts, watchTask, server))
+gulp.task('default', gulp.parallel(htaccess, pages, img, js , css, fonts, sound))
