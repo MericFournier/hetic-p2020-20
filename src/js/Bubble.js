@@ -1,6 +1,6 @@
 class Bubble {
   constructor() {
-    this.container = document.querySelector('.bubbles')
+    this.container = document.querySelector('.bubbles__orientation')
     this.bubbles = []
     this.bubbleNumber = 20
     this.bubbleSizeMin = 8
@@ -8,7 +8,6 @@ class Bubble {
   }
 
   /**
-   *
    * @param {int} min
    * @param {int} max
    * @returns {int} element

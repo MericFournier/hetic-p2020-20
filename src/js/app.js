@@ -3,6 +3,7 @@ import ScrollAnimation from './ScrollAnimation'
 import Bubble from './Bubble'
 import Anchor from './Anchor'
 import ListenDrag from './ListenDrag'
+import GyroscopeBubble from './GyroscopeBubble'
 
 
 window.addEventListener('load', () => {
@@ -20,6 +21,8 @@ window.addEventListener('load', () => {
 
   const bubbles = new Bubble()
   bubbles.createBubble()
+
+  const gyroBubble = new GyroscopeBubble()
 })
 
 const drag = new ListenDrag()
@@ -40,3 +43,4 @@ const options = {
 }
 
 */
+

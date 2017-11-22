@@ -23,7 +23,6 @@ export default class ListenDrag {
   }
   initListener() {
     this.element.forEach((that) => {
-      console.log(that)
       new Draggable(that, this.option)
     })
   }

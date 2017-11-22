@@ -13,9 +13,7 @@ export default class DragDetails {
     this.swipeCircle.forEach((that) => {
       that.addEventListener('mousedown', (e) => {
         this.begindrag = e.screenX
-        console.log('ncfovneroivr')
         window.addEventListener('mousemove', (event) => {
-          console.log(event.screenX)
         })
       })
     })

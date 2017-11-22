@@ -50,7 +50,6 @@ export default class ScrollAnimation {
     this.changeSection()
   }
   changeSection() {
-    console.log(this.direction)
     if (this.direction.orientation === 1) {
       window.setTimeout(() => {
         this.current_section.classList.remove('section--active')
