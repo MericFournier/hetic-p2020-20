@@ -98,10 +98,8 @@ export default class GyroscopeBubble {
 
   bubbleSize() {
     if (window.innerWidth < window.innerHeight) {
-      console.log('width')
       document.querySelector('.bubbles').style.width = `${window.innerHeight}px`
     } else {
-      console.log('height')
       document.querySelector('.bubbles').style.height = `${window.innerWidth}px`
     }
   }

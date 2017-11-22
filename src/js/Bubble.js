@@ -5,6 +5,9 @@ class Bubble {
     this.bubbleNumber = 20
     this.bubbleSizeMin = 8
     this.bubbleSizeMax = 18
+    this.unitGenerate = 'vw'
+
+    this.createBubble()
   }
 
   /**
@@ -22,6 +25,8 @@ class Bubble {
     return bubble.element
   }
   createBubble() {
+    this.bubbleContainerSize()
+    window.addEventListener('resize', this.bubbleContainerSize())
     window.setInterval(() => {
       // Remove Bubble out screen
       for (let i = 0; i < this.bubbles.length; i += 1) {
@@ -36,7 +41,7 @@ class Bubble {
       if (this.bubbles.length < this.bubbleNumber) {
         const i = this.bubbles.length
         const diameter = `${Bubble.aleat(this.bubbleSizeMin, this.bubbleSizeMax)}px`
-        const left = `${Bubble.aleat(0, 100)}vw`
+        const left = `${Bubble.aleat(0, 100) + this.unitGenerate}`
         const duration = Bubble.aleat(1200, 10000)
         const delay = Bubble.aleat(100, 100)
         this.bubbles[i] = Bubble.generateBubble()
@@ -52,6 +57,22 @@ class Bubble {
         this.container.appendChild(this.bubbles[i])
       }
     }, 100)
+  }
+  bubbleContainerSize() {
+    if (navigator.userAgent.match(/Android/i)
+      || navigator.userAgent.match(/webOS/i)
+      || navigator.userAgent.match(/iPhone/i)
+      || navigator.userAgent.match(/iPad/i)
+      || navigator.userAgent.match(/iPod/i)
+      || navigator.userAgent.match(/BlackBerry/i)
+      || navigator.userAgent.match(/Windows Phone/i)
+    ) {
+      if (window.innerWidth < window.innerHeight) {
+        this.unitGenerate = 'vh'
+      } else {
+        this.unitGenerate = 'vw'
+      }
+    }
   }
 }
 export default Bubble

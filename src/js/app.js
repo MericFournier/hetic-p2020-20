@@ -11,16 +11,12 @@ window.addEventListener('load', () => {
   const anchor = new Anchor()
 
   // Init scroll animation
-  const scrollInit = (direction) => {
-    const scrollAnim = new ScrollAnimation(direction)
-  }
+  const scrollAnim = new ScrollAnimation()
 
   // Listener Scroll
-  const scroll = new ScrollListener(scrollInit, 1500, true)
-
+  let scroll = new ScrollListener(scrollAnim.initAnimation, 1500, true, scrollAnim)
 
   const bubbles = new Bubble()
-  bubbles.createBubble()
 
   const gyroBubble = new GyroscopeBubble()
 })

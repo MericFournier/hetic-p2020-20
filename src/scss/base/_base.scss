@@ -1,6 +1,16 @@
 body {
     background-color: white;
     overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 /*

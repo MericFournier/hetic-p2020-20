@@ -7,11 +7,11 @@ export default class ScrollListener {
      * @param {int} delay
      * @param {boolean} keyboardNavigation
      */
-  constructor(callback, delay = 1500, keyboardNavigation = false) {
+  constructor(callback, delay = 1500, keyboardNavigation = false, objParent) {
     this.delay = delay
     this.keyboardNavigation = keyboardNavigation
     this.event_timeStamp = -+this.delay
-    this.callback = callback
+    this.callback = callback.bind(objParent)
 
     // begin the listener
     this.listenScroll()
@@ -32,7 +32,6 @@ export default class ScrollListener {
     // iphone block scroll
     window.addEventListener('scroll', (e) => {
       e.preventDefault()
-      window.scroll(0, 0)
     })
     window.addEventListener('touchmove', (e) => {
       e.preventDefault()
@@ -76,7 +75,10 @@ export default class ScrollListener {
     // Keyboard
     if (this.keyboardNavigation) {
       window.addEventListener('keydown', (e) => {
-        this.keyboardAction(e)
+        if (e.timeStamp > (this.event_timeStamp + this.delay)) {
+          this.event_timeStamp = e.timeStamp
+          this.keyboardAction(e)
+        }
       })
     }
   }
