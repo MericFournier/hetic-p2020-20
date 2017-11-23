@@ -12,7 +12,6 @@ export default class ScrollAnimation {
   }
   initAnimation(direction) {
     this.direction = direction
-    console.log(this.direction)
 
     this.checkCorrectMove()
     // if ('ontouchstart' in window) {

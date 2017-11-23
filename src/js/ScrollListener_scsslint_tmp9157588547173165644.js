@@ -6,7 +6,7 @@ export default class ScrollListener {
      * @param callback
      * @param {int} delay
      * @param {boolean} keyboardNavigation
-     * @param {Obj} objParent The obj parent of the callback
+     * @param {Obj} The parent of th
      */
   constructor(callback, delay = 1500, keyboardNavigation = false, objParent) {
     this.delay = delay
