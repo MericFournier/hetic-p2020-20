@@ -10,7 +10,7 @@ export default class ScrollListener {
   constructor(callback, delay = 1500, keyboardNavigation = false, objParent) {
     this.delay = delay
     this.keyboardNavigation = keyboardNavigation
-    this.event_timeStamp = -+this.delay
+    this.event_timeStamp = -+this.delay + 100
     this.callback = callback.bind(objParent)
 
     // begin the listener
@@ -30,12 +30,12 @@ export default class ScrollListener {
      */
   mobileListener() {
     // iphone block scroll
-    window.addEventListener('scroll', (e) => {
-      e.preventDefault()
-    })
-    window.addEventListener('touchmove', (e) => {
-      e.preventDefault()
-    })
+    // window.addEventListener('scroll', (e) => {
+    //   e.preventDefault()
+    // })
+    // window.addEventListener('touchmove', (e) => {
+    //   e.preventDefault()
+    // })
 
     // Homemade scroll listener
     const touch = {}
@@ -65,8 +65,8 @@ export default class ScrollListener {
     // Wheel (scroll)
     window.addEventListener('wheel', (e) => {
       if (e.deltaY >= 10 || e.deltaY <= -10) {
-        if (e.timeStamp > (this.event_timeStamp + this.delay)) {
-          this.event_timeStamp = e.timeStamp
+        if (e.timeStamp > (this.event_timeStamp + this.delay +100)) {
+          this.event_timeStamp = e.timeStamp + 100
           this.callback(this.getWheelDirection(e))
         }
       }
@@ -76,7 +76,7 @@ export default class ScrollListener {
     if (this.keyboardNavigation) {
       window.addEventListener('keydown', (e) => {
         if (e.timeStamp > (this.event_timeStamp + this.delay)) {
-          this.event_timeStamp = e.timeStamp
+          this.event_timeStamp = e.timeStamp + 100
           this.keyboardAction(e)
         }
       })
