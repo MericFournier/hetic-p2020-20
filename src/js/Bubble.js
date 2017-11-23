@@ -7,8 +7,6 @@ class Bubble {
     this.bubbleSizeMax = 30
     this.unitGenerate = 'vw'
 
-    console.log(this.bubbleNumber)
-
     this.createBubble()
   }
 

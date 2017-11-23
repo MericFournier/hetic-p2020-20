@@ -10,7 +10,7 @@ export default class ScrollListener {
   constructor(callback, delay = 1500, keyboardNavigation = false, objParent) {
     this.delay = delay
     this.keyboardNavigation = keyboardNavigation
-    this.event_timeStamp = -+this.delay + 100
+    this.event_timeStamp = -+this.delay
     this.callback = callback.bind(objParent)
 
     // begin the listener
@@ -29,32 +29,29 @@ export default class ScrollListener {
      * Active listener on mobile
      */
   mobileListener() {
-    // iphone block scroll
-    // window.addEventListener('scroll', (e) => {
-    //   e.preventDefault()
-    // })
-    // window.addEventListener('touchmove', (e) => {
-    //   e.preventDefault()
-    // })
-
     // Homemade scroll listener
     const touch = {}
     const direction = {}
 
     document.addEventListener('touchstart', (e) => {
-      touch.start = parseInt(e.changedTouches[0].pageY, 10)
-    })
-
-    document.addEventListener('touchend', (e) => {
-      touch.end = parseInt(e.changedTouches[0].pageY, 10)
-      if (touch.start - 5 > touch.end) {
-        direction.axe = 'y'
-        direction.orientation = parseInt(1, 10)
-      } else if (touch.start + 5 < touch.end) {
-        direction.axe = 'y'
-        direction.orientation = parseInt(-1, 10)
+      if (e.srcElement !== document.querySelector('.swiper__circle')) {
+        touch.start = parseInt(e.changedTouches[0].pageY, 10)
+      } else {
+        touch.start = null
       }
-      this.callback(direction)
+    })
+    document.addEventListener('touchend', (e) => {
+      if (touch.start !== null) {
+        touch.end = parseInt(e.changedTouches[0].pageY, 10)
+        if (touch.start - 5 > touch.end) {
+          direction.axe = 'y'
+          direction.orientation = parseInt(1, 10)
+        } else if (touch.start + 5 < touch.end) {
+          direction.axe = 'y'
+          direction.orientation = parseInt(-1, 10)
+        }
+        this.callback(direction)
+      }
     })
   }
 
@@ -65,8 +62,8 @@ export default class ScrollListener {
     // Wheel (scroll)
     window.addEventListener('wheel', (e) => {
       if (e.deltaY >= 10 || e.deltaY <= -10) {
-        if (e.timeStamp > (this.event_timeStamp + this.delay +100)) {
-          this.event_timeStamp = e.timeStamp + 100
+        if (e.timeStamp > (this.event_timeStamp + this.delay)) {
+          this.event_timeStamp = e.timeStamp
           this.callback(this.getWheelDirection(e))
         }
       }
@@ -76,7 +73,7 @@ export default class ScrollListener {
     if (this.keyboardNavigation) {
       window.addEventListener('keydown', (e) => {
         if (e.timeStamp > (this.event_timeStamp + this.delay)) {
-          this.event_timeStamp = e.timeStamp + 100
+          this.event_timeStamp = e.timeStamp
           this.keyboardAction(e)
         }
       })

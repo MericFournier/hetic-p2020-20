@@ -105,7 +105,6 @@ export default class ScrollAnimation {
   }
   removeDetail() {
     this.detail = document.querySelector('.section--detailActive')
-    console.log(this.detail)
     if (this.detail) {
       this.detail.classList.remove('section--detailActive')
       document.querySelector('.swiper__circle').style.left = 0
