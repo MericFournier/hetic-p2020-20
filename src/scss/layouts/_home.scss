@@ -25,12 +25,14 @@
     left: 20%;
     background-color: #79BE23;
     color: white;
-    font-size: 4.8vw;
-    padding: 5px 15px;
+    padding: 10px 15px 5px 15px;
     transform: rotate(-7deg);
-    font-family: 'FantaPlayful', 'Roboto', sans-serif;
 
-    @media (min-width: $tablet) {
-        font-size: 30px;
+    img {
+        width: 50vw;
+
+        @media (min-width: $tablet) {
+            width: 310px;
+        }
     }
 }
