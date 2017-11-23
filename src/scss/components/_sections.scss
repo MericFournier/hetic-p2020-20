@@ -137,10 +137,17 @@ section {
 }
 
 .swiper__circle--scale {
+    position: absolute;
     transform: scale(1);
+    width: 60px;
+    height: 60px;
     transition: transform 0.2s;
-    transform-origin: 40% center;
+    transform-origin: 50% 50%;
 
+  @media (min-width: $tablet) {
+    width: 85px;
+    height: 85px;
+  }
 
     &:hover, &:active {
         transform: scale(0.8);
@@ -149,7 +156,6 @@ section {
 }
 
 .swiper__circle {
-    position: absolute;
     width: 60px;
     height: 60px;
     border: 1.8px dashed #666ADE;
@@ -168,17 +174,31 @@ section {
     &:active {
         border: 2px solid #666ADE;
     }
+
+    &:hover + .swiper__arrow--container::after {
+        animation: hoverArrow 0.4s ease-out 0.2s;
+    }
+}
+
+.swiper__arrow--container::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    background: white;
+    bottom: 23%;
+    opacity: 0;
 }
 
 .swiper__circle--centerCircle {
     position: absolute;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
     width: 10px;
     height: 10px;
     border: 2px solid #666ADE;
-    border-radius: 1000px;
+    border-radius: 100%;
 
 
   @media (min-width: $tablet) {
@@ -192,6 +212,7 @@ section {
     width: 120px;
     margin-top: 23px;
     margin-left: 85px;
+    position: relative;
 
     @media (min-width: $tablet) {
         width: 180px;
@@ -207,5 +228,25 @@ section {
     }
     to {
       transform: rotate(180deg);
+    }
+}
+
+@keyframes hoverArrow {
+    0% {
+      left: 35%;
+      height: 4px;
+      bottom: 23%;
+      opacity: 1;
+    }
+    80% {
+      height: 25px;
+      left: 90%;
+      bottom: 0%;
+    }
+    100% {
+      height: 25px;
+      left: 100%;
+      bottom: 0%;
+      opacity: 1;
     }
 }
