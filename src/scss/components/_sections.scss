@@ -45,9 +45,15 @@ section {
     box-shadow: 0px 1px 6px 0px #E0E0E0;
     transition: all 1s ease-out;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
         transform: translateY(18vh);
         width: 55vw;
+        padding: 30px 0 40px 14%;
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        transform: translateY(18vh);
+        width: 65vw;
         padding: 30px 0 40px 14%;
     }
 }
@@ -61,8 +67,12 @@ section {
     opacity: 1;
     transition: opacity .3s ease-out;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
         font-size: 4vw;
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        font-size: 6vw;
     }
 }
 
@@ -78,9 +88,13 @@ section {
     opacity: 1;
     transition: opacity .3s ease-out;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
         font-size: 6vw;
         min-height: 90px;
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        font-size: 8vw;
     }
 }
 
@@ -97,10 +111,16 @@ section {
     cursor: pointer;
     user-select: none;
     opacity: 1;
+    transition: all .3s ease-out;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
         font-size: 1.5vw;
         padding: 20px 35px;
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        font-size: 2.5vw;
+        padding: 15px 25px;
     }
 
     &:hover {
@@ -120,9 +140,14 @@ section {
     left: 0;
     top: 0;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
         width: 22vw;
-        transform: translateX(-69%) translateY(-16%) rotate(21.8deg)
+        transform: translateX(-69%) translateY(-16%) rotate(21.8deg);
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        width: 25vw;
+        transform: translateX(-69%) translateY(-13%) rotate(8deg);
     }
 }
 
@@ -131,8 +156,12 @@ section {
     transform: translateY(60px) translateX(-30px);
     transition: opacity 0.1s;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
         transform: translateY(90px) translateX(-60px);
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        transform: translateY(80px) translateX(-30px)
     }
 }
 
