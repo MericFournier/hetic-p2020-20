@@ -1,5 +1,5 @@
-import ScrollListener from './ScrollListener'
-import ScrollAnimation from './ScrollAnimation'
+import ScrollListener from './scroll/ScrollListener'
+import ScrollAnimation from './scroll/ScrollAnimation'
 import Bubble from './Bubble'
 import Anchor from './Anchor'
 import ListenDrag from './ListenDrag'
@@ -22,21 +22,3 @@ window.addEventListener('load', () => {
 })
 
 const drag = new ListenDrag()
-
-/*
-const element = document.querySelector('.swiper__circle')
-const options = {
-  grid: 200,
-  limit: {
-    x: [1, 200],
-    y: [-5, 5]
-  },
-  smoothDrag: true,
-  onDrag: (drag, e) => {
-    if (e >= 200) {
-    }
-  },
-}
-
-*/
-

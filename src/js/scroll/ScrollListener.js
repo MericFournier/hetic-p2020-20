@@ -42,7 +42,6 @@ export default class ScrollListener {
       }
     })
     document.addEventListener('touchend', (e) => {
-      console.log(touch.start)
       if (touch.start !== null) {
         touch.end = parseInt(e.changedTouches[0].pageY, 10)
         if (touch.start - 5 > touch.end) {
@@ -52,11 +51,10 @@ export default class ScrollListener {
           direction.axe = 'y'
           direction.orientation = parseInt(-1, 10)
         }
-        this.callback(direction
+        this.callback(direction)
       }
     })
   }
-
   /**
      * Active listener on desktop
      */
@@ -123,7 +121,6 @@ export default class ScrollListener {
     direction.orientation = parseInt(-1, 10)
     return direction
   }
-
   /**
      * Function called for the next action
      */
