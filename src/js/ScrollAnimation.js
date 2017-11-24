@@ -13,16 +13,16 @@ export default class ScrollAnimation {
   initAnimation(direction) {
     this.direction = direction
 
-    // this.checkCorrectMove()
-    if ('ontouchstart' in window) {
-      window.addEventListener('touchstart', (e) => {
-        if (e.srcElement !== document.querySelector('swiper__circle')) {
-        this.checkCorrectMove()
-        }
-      })
-    } else {
     this.checkCorrectMove()
-    }
+    // if ('ontouchstart' in window) {
+    //   window.addEventListener('touchstart', (e) => {
+    //     if (e.srcElement !== document.querySelector('swiper__circle')) {
+    //     this.checkCorrectMove()
+    //     }
+    //   })
+    // } else {
+    // this.checkCorrectMove()
+    // }
   }
 
   checkCorrectMove() {
@@ -65,7 +65,7 @@ export default class ScrollAnimation {
   }
 
   changeSection() {
-    this.sectionTimer = this.direction.orientation === -1 ? 915 : 150
+    this.sectionTimer = this.direction.orientation === -1 ? 800 : 200
     window.setTimeout(() => {
       this.current_section.classList.remove('section--active')
       this.last_anchor = this.current_section.getAttribute('data-anchor')
@@ -92,22 +92,20 @@ export default class ScrollAnimation {
       // waves
       this.waves.classList.remove(`waves__color--${this.last_anchor}`)
       this.waves.classList.add(`waves__color--${this.new_anchor}`)
-      this.removeDetail()
     }, this.wavesTimer)
 
-    this.bubblesTimer = this.direction.orientation === -1 ? 1100 : 10
-
-    window.setTimeout(() => {
-      // bubbles
-      this.bubbles.classList.remove(`bubbles__color--${this.last_anchor}`)
-      this.bubbles.classList.add(`bubbles__color--${this.new_anchor}`)
-    }, this.bubblesTimer)
-  }
-  removeDetail() {
-    this.detail = document.querySelector('.section--detailActive')
-    if (this.detail) {
-      this.detail.classList.remove('section--detailActive')
-      document.querySelector('.swiper__circle').style.left = 0
+    if (this.direction.orientation === -1) {
+      window.setTimeout(() => {
+        // bubbles
+        this.bubbles.classList.remove(`bubbles__color--${this.last_anchor}`)
+        this.bubbles.classList.add(`bubbles__color--${this.new_anchor}`)
+      }, 1100)
+    } else {
+      window.setTimeout(() => {
+        // bubbles
+        this.bubbles.classList.remove(`bubbles__color--${this.last_anchor}`)
+        this.bubbles.classList.add(`bubbles__color--${this.new_anchor}`)
+      }, 200)
     }
   }
 }

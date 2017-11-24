@@ -2,9 +2,9 @@ class Bubble {
   constructor() {
     this.container = document.querySelector('.bubbles__orientation')
     this.bubbles = []
-    this.bubbleNumber = Math.floor((2 * window.innerWidth) / 100)
+    this.bubbleNumber = 20
     this.bubbleSizeMin = 8
-    this.bubbleSizeMax = 30
+    this.bubbleSizeMax = 18
     this.unitGenerate = 'vw'
 
     this.createBubble()

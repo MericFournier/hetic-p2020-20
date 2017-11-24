@@ -10,13 +10,13 @@ export default class ListenDrag {
     this.option = {
       grid: 200,
       limit: {
-        x: [1, 400],
+        x: [1, 200],
         y: [-5, 5],
       },
       smoothDrag: true,
       onDrag: (drag, e) => {
         this.callbackDrag(e)
-      },
+      }
     }
 
     this.initListener()
@@ -27,7 +27,7 @@ export default class ListenDrag {
     })
   }
   callbackDrag(e) {
-    if (e > 170) {
+    if (e > 150) {
       document.querySelector('.section--active').classList.add('section--detailActive')
     }
   }
