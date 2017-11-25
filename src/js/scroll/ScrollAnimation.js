@@ -13,16 +13,10 @@ export default class ScrollAnimation {
   initAnimation(direction) {
     this.direction = direction
 
-    this.checkCorrectMove()
-    // if ('ontouchstart' in window) {
-    //   window.addEventListener('touchstart', (e) => {
-    //     if (e.srcElement !== document.querySelector('swiper__circle')) {
-    //     this.checkCorrectMove()
-    //     }
-    //   })
-    // } else {
-    // this.checkCorrectMove()
-    // }
+    if (!document.querySelector('.section--detailActive')) {
+      this.checkCorrectMove()
+    }
+
   }
 
   checkCorrectMove() {
@@ -65,7 +59,7 @@ export default class ScrollAnimation {
   }
 
   changeSection() {
-    this.sectionTimer = this.direction.orientation === -1 ? 800 : 200
+    this.sectionTimer = this.direction.orientation === -1 ? 1100 : 10
     window.setTimeout(() => {
       this.current_section.classList.remove('section--active')
       this.last_anchor = this.current_section.getAttribute('data-anchor')

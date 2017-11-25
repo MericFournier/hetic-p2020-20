@@ -26,7 +26,7 @@
 section {
    position: relative;
    min-width: 100vw;
-   height: 100vh;
+   min-height: 100vh;
    overflow: hidden;
    display: none;
 }
@@ -169,7 +169,7 @@ section {
     position: absolute;
     width: 60px;
     height: 60px;
-    transition: transform 0.2s;
+    transition: transform 0.4s;
     transform-origin: 50% 50%;
     border-radius: 100%;
     border: 1.8px dashed #666ADE;
@@ -187,7 +187,7 @@ section {
 
 }
 
-.swiper__circle {
+.swiper__circle--rotate {
     width: 60px;
     height: 60px;
     transition: transform .9s ease-out, left 0.15s;
@@ -217,19 +217,23 @@ section {
 
 .swiper__circle--centerCircle {
     position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
+    left: 30px;
+    top: 30px;
     width: 10px;
     height: 10px;
     border: 2px solid #666ADE;
     border-radius: 100%;
+    margin: -5px 0 0 -5px;
+    transition: transform 0.2s;
 
 
   @media (min-width: $tablet) {
         width: 15px;
         height: 15px;
         border: 3px solid #666ADE;
+        left: 42px;
+        top: 42px;
+        margin: -7px 0 0 -7px;
     }
 }
 

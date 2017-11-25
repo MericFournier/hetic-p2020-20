@@ -3,12 +3,10 @@
 }
 //global for waves
 .waves{
-    position: absolute;
+    position: relative;
     width: 100vw;
-    top: 100%;
     left: 0;
     transition: top 2s;
-
     @media (min-width: $tablet) {
         top: 107%;
     }
