@@ -182,7 +182,7 @@ section {
   }
 
     &:hover, &:active {
-        transform: scale(0.8);
+        transform: scale(0.9);
     }
 
 }
@@ -201,6 +201,7 @@ section {
     }
 
     &:hover + .swiper__arrow--container::after {
+        display: block;
         animation: hoverArrow 0.4s ease-out 0.2s;
     }
 }
@@ -213,6 +214,7 @@ section {
     background: white;
     bottom: 23%;
     opacity: 0;
+    display: none;
 }
 
 .swiper__circle--centerCircle {
