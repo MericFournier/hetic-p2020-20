@@ -20,7 +20,7 @@
         padding: 0;
     }
 
-    .bottle__label--button, .bottle__label--name, .bottle__label--title {
+    .bottle__labelButton, .bottle__labelName, .bottle__labelTitle {
         opacity: 0;
     }
 
@@ -38,7 +38,7 @@
     }
 }
 
-.bottle__bio--close {
+.bottle__bioClose {
     position: absolute;
     right: 15px;
     top: 15px;
@@ -52,7 +52,7 @@
     }
 }
 
-.bottle__bio--name {
+.bottle__bioName {
     text-align: center;
     padding-top: 30px;
     color: $dark-blue;
@@ -65,7 +65,7 @@
     }
 }
 
-.bottle__bio--title {
+.bottle__bioTitle {
     text-align: center;
     padding-top: 5px;
     text-transform: uppercase;
@@ -77,7 +77,7 @@
     }
 }
 
-.bottle__bio--button {
+.bottle__bioButton {
     padding-top: 30px;
     text-align: center;
 

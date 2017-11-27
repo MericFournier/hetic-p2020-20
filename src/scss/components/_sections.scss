@@ -3,11 +3,11 @@
  */
 
 .section.orange {
-    .bottle__label--title {
+    .bottle__labelTitle {
         color: #F99E36;
     }
 
-    .bottle__label--button {
+    .bottle__labelButton {
         color: #F99E36;
         box-shadow: 0px 2px 4px 0px rgba(249, 158, 54, 0.5);
 
@@ -16,11 +16,11 @@
         }
     }
 
-    .bottle__bio--title {
+    .bottle__bioTitle {
         color: #F99E36;
     }
 
-    .bottle__bio--button a {
+    .bottle__bioButton a {
         color: #F99E36;
         box-shadow: 0px 2px 4px 0px rgba(249, 158, 54, 0.5);
 
@@ -70,7 +70,7 @@ section {
     }
 }
 
-.bottle__label--name {
+.bottle__labelName {
     font-size: 8vw;
     letter-spacing: 0.01em;
     font-family: 'Roboto', sans-serif;
@@ -88,7 +88,7 @@ section {
     }
 }
 
-.bottle__label--title {
+.bottle__labelTitle {
     margin-bottom: 25px;
     margin-top: 5px;
     min-height: 40px;
@@ -110,7 +110,7 @@ section {
     }
 }
 
-.bottle__label--button {
+.bottle__labelButton {
     display: inline-block;
     margin-bottom: 5px;
     font-size: 4.1vw;
