@@ -152,14 +152,14 @@ section {
     left: 0;
     top: 0;
 
+    @media (min-width: $tablet) {
+        width: 25vw;
+        transform: translateX(-69%) translateY(-13%) rotate(8deg);
+    }
+
     @media (min-width: $desktop) {
         width: 22vw;
         transform: translateX(-69%) translateY(-16%) rotate(21.8deg);
-    }
-
-    @media (min-width: $tablet) and (max-width: $desktop) {
-        width: 25vw;
-        transform: translateX(-69%) translateY(-13%) rotate(8deg);
     }
 }
 
@@ -168,12 +168,12 @@ section {
     transform: translateY(60px) translateX(-30px);
     transition: opacity 0.1s;
 
-    @media (min-width: $desktop) {
-        transform: translateY(90px) translateX(-60px);
+    @media (min-width: $tablet) {
+        transform: translateY(80px) translateX(-30px)
     }
 
-    @media (min-width: $tablet) and (max-width: $desktop) {
-        transform: translateY(80px) translateX(-30px)
+    @media (min-width: $desktop) {
+        transform: translateY(90px) translateX(-60px);
     }
 }
 

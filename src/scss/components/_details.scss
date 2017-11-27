@@ -96,14 +96,14 @@
         opacity: 1;
         transition: all .3s ease-out;
 
+        @media (min-width: $tablet) {
+            font-size: 2.5vw;
+            padding: 15px 25px;
+        }
+
         @media (min-width: $desktop) {
             font-size: 1.5vw;
             padding: 20px 35px;
-        }
-
-        @media (min-width: $tablet) and (max-width: $desktop) {
-            font-size: 2.5vw;
-            padding: 15px 25px;
         }
 
         &:hover {
