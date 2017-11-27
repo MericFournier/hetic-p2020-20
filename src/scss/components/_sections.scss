@@ -10,11 +10,23 @@
     .bottle__label--button {
         color: #F99E36;
         box-shadow: 0px 2px 4px 0px rgba(249, 158, 54, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(249, 158, 54, 0.5);
+        }
     }
 
-    .bottle__label--button:hover {
+    .bottle__bio--title {
         color: #F99E36;
-        box-shadow: 0px 3px 8px 0px rgba(249, 158, 54, 0.5);
+    }
+
+    .bottle__bio--button a {
+        color: #F99E36;
+        box-shadow: 0px 2px 4px 0px rgba(249, 158, 54, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(249, 158, 54, 0.5);
+        }
     }
 }
 
