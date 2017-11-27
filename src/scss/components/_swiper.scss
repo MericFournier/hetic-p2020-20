@@ -1,0 +1,130 @@
+.swiper {
+    position: absolute;
+    transform: translateY(60px) translateX(-30px);
+    transition: opacity 0.1s;
+
+    @media (min-width: $tablet) {
+        transform: translateY(80px) translateX(-30px)
+    }
+
+    @media (min-width: $desktop) {
+        transform: translateY(90px) translateX(-60px);
+    }
+}
+
+.swiper__circle--scale {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.4s;
+    transform-origin: 50% 50%;
+    border-radius: 100%;
+    border: 1.8px dashed #666ADE;
+
+
+  @media (min-width: $tablet) {
+    width: 85px;
+    height: 85px;
+    border: 2px dashed #666ADE;
+  }
+
+    &:hover, &:active {
+        transform: scale(0.9);
+    }
+
+}
+
+.swiper__circle--rotate {
+    width: 60px;
+    height: 60px;
+    transition: transform .9s ease-out, left 0.15s;
+    cursor: pointer;
+    animation: 5s dragButton infinite linear;
+    border: none;
+
+    @media (min-width: $tablet) {
+        width: 85px;
+        height: 85px;
+    }
+
+    &:hover + .swiper__arrow--container::after {
+        display: block;
+        animation: hoverArrow 0.4s ease-out 0.2s;
+    }
+}
+
+.swiper__arrow--container::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    background: white;
+    bottom: 23%;
+    opacity: 0;
+    display: none;
+}
+
+.swiper__circle--centerCircle {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #666ADE;
+    border-radius: 100%;
+    margin: -5px 0 0 -5px;
+    transition: transform 0.2s;
+
+
+  @media (min-width: $tablet) {
+        width: 15px;
+        height: 15px;
+        border: 3px solid #666ADE;
+        left: 42px;
+        top: 42px;
+        margin: -7px 0 0 -7px;
+    }
+}
+
+.swiper__arrow {
+    width: 120px;
+    margin-top: 23px;
+    margin-left: 85px;
+    position: relative;
+
+    @media (min-width: $tablet) {
+        width: 180px;
+        margin-top: 30px;
+        margin-left: 120px;
+    }
+}
+
+
+@keyframes dragButton {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+}
+
+@keyframes hoverArrow {
+    0% {
+      left: 35%;
+      height: 4px;
+      bottom: 23%;
+      opacity: 1;
+    }
+    80% {
+      height: 25px;
+      left: 90%;
+      bottom: 0%;
+    }
+    100% {
+      height: 25px;
+      left: 100%;
+      bottom: 0%;
+      opacity: 1;
+    }
+}
