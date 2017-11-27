@@ -25,38 +25,38 @@ import sugar_srcset  from 'gulp-sugar-srcset'
 
 /* Configurations */
 const config = {
-    src     : '../src/',
-    dist    : '../dist/',
+    src     : 'src/',
+    dist    : 'dist/',
     page    : {
-        src     : '../src/*.html',
-        dest    :  '../dist/'
+        src     : 'src/*.html',
+        dest    :  'dist/'
     },
     images  : {
-        src     : '../src/img/**',
-        dest    :  '../dist/img/'
+        src     : 'src/img/**',
+        dest    :  'dist/img/'
     },
     sounds  : {
-        src     : '../src/sounds/**',
-        dest    :  '../dist/sounds/'
+        src     : 'src/sounds/**',
+        dest    :  'dist/sounds/'
     },
     sass    : {
-        src     : '../src/scss/**/**.scss',
-        dest    :  '../dist/css'
+        src     : 'src/scss/**/**.scss',
+        dest    :  'dist/css'
     },
     js      : {
-        src     : '../src/js/',
-        app     : '../src/js/app.js',
-        dest    :  '../dist/js'
+        src     : 'src/js/',
+        app     : 'src/js/app.js',
+        dest    :  'dist/js'
     },
     fonts   : {
-        src     : '../src/fonts/**',
-        dest    :  '../dist/fonts'
+        src     : 'src/fonts/**',
+        dest    :  'dist/fonts'
     },
     htaccess   : {
-        src     : '../src/.htaccess',
-        dest    :  '../dist/',
+        src     : 'src/.htaccess',
+        dest    :  'dist/',
     },
-    server  : '../dist/',
+    server  : 'dist/',
 }
 
 
