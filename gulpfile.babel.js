@@ -1,16 +1,13 @@
 /* Dependencies */
 import gulp          from 'gulp'
-import css_nano      from 'gulp-cssnano'
 import rename        from 'gulp-rename'
 import sass          from 'gulp-sass'
 import autoprefixer  from 'gulp-autoprefixer'
-import concat        from 'gulp-concat'
 import imagemin      from 'gulp-imagemin'
 import uglify        from 'gulp-uglify'
 import sourcemaps    from 'gulp-sourcemaps'
 import browserify    from 'browserify'
 import babelify      from 'babelify'
-import babel         from 'gulp-babel'
 import source        from 'vinyl-source-stream'
 import buffer        from 'vinyl-buffer'
 import browser_sync  from 'browser-sync'
@@ -91,7 +88,6 @@ const img = () => {
     return  gulp.src( [ config.images.src ] )
             .pipe(imagemin())
             .pipe(srcset([{
-                match:  '(min-width: 320px)',
                 width:  [1, 1920, 1280, 720, 560, 320],
             }]))
             .pipe(gulp.dest( config.images.dest ))
