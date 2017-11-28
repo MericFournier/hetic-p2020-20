@@ -4,7 +4,6 @@ import Bubble from './Bubble'
 import Anchor from './Anchor'
 import ListenDrag from './ListenDrag'
 import GyroscopeBubble from './GyroscopeBubble'
-import ParallaxSwiper from './ParallaxSwiper'
 
 
 window.addEventListener('load', () => {
@@ -21,7 +20,7 @@ window.addEventListener('load', () => {
 
   const gyroBubble = new GyroscopeBubble()
 
-  const parallax = new ParallaxSwiper()
 })
 
 const drag = new ListenDrag()
+

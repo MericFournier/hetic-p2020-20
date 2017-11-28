@@ -11,7 +11,7 @@ export default class ScrollListener {
   constructor(callback, delay = 1500, keyboardNavigation = false, objParent) {
     this.delay = delay
     this.keyboardNavigation = keyboardNavigation
-    this.event_timeStamp = 0
+    this.event_timeStamp = -+this.delay
     this.callback = callback.bind(objParent)
 
     // begin the listener

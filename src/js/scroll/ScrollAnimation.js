@@ -1,3 +1,5 @@
+import ParallaxSwiper from '../ParallaxSwiper'
+
 /**
  * Callback from scrollListener
  */
@@ -59,7 +61,7 @@ export default class ScrollAnimation {
   }
 
   changeSection() {
-    this.sectionTimer = this.direction.orientation === -1 ? 1100 : 10
+    this.sectionTimer = this.direction.orientation === -1 ? 900 : 100
     window.setTimeout(() => {
       this.current_section.classList.remove('section--active')
       this.last_anchor = this.current_section.getAttribute('data-anchor')
@@ -68,6 +70,9 @@ export default class ScrollAnimation {
       this.current_section = this.sections[this.next]
       this.current_section.classList.add('section--active')
       this.new_anchor = this.current_section.getAttribute('data-anchor')
+
+      const parallax = new ParallaxSwiper()
+
     }, this.sectionTimer)
 
     this.last_anchor = this.current_section.getAttribute('data-anchor')
@@ -87,19 +92,18 @@ export default class ScrollAnimation {
       this.waves.classList.remove(`waves__color--${this.last_anchor}`)
       this.waves.classList.add(`waves__color--${this.new_anchor}`)
     }, this.wavesTimer)
-
-    if (this.direction.orientation === -1) {
-      window.setTimeout(() => {
-        // bubbles
-        this.bubbles.classList.remove(`bubbles__color--${this.last_anchor}`)
-        this.bubbles.classList.add(`bubbles__color--${this.new_anchor}`)
-      }, 1100)
-    } else {
-      window.setTimeout(() => {
-        // bubbles
-        this.bubbles.classList.remove(`bubbles__color--${this.last_anchor}`)
-        this.bubbles.classList.add(`bubbles__color--${this.new_anchor}`)
-      }, 200)
+    this.bubblesTimer = this.direction.orientation === -1 ? 1100 : 10
+    window.setTimeout(() => {
+      // bubbles
+      this.bubbles.classList.remove(`bubbles__color--${this.last_anchor}`)
+      this.bubbles.classList.add(`bubbles__color--${this.new_anchor}`)
+    }, this.bubblesTimer)
+  }
+  removeDetail() {
+    this.detail = document.querySelector('.section--detailActive')
+    if (this.detail) {
+      this.detail.classList.remove('section--detailActive')
+      document.querySelector('.swiper__circle').style.left = 0
     }
   }
 }
