@@ -1,0 +1,23 @@
+.slideButtons {
+    position: absolute;
+    right: 0px;
+    top: 85vh;
+    transform: rotate(-90deg);
+
+    .slideButtons__previous, .slideButtons__next {
+        display: inline-block;
+        color: $dark-blue;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: 15px;
+        margin-right: 10px;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+            color: #696cc2;
+        }
+    }
+}
