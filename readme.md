@@ -15,7 +15,7 @@ A web project created for the Front-End class in 3rd grade at [HÉTIC](http://ww
 
 ##  Description
 
-During our first semester of front-end class in 3rd grade of HÉTIC ( hight studies in information and communication ) we had to create the website of a company. we choosed to work on Fanta's product because we both loved their originality and the high potential of creativity between fanta's universe made of colors and fruits ! 
+During our first semester of front-end class in 3rd grade of HETIC (hight studies in information and communication) we had to create the website of a company. we choosed to work on Fanta's product because we both loved their originality and the high potential of creativity between fanta's universe made of colors and fruits ! 
 
 This project allowed us to apply all the things we learned in front-end class along the trimester ! 
 
@@ -62,9 +62,9 @@ Then, you can run the project in your browser or build the project.
 
 <img src="http://twemoji.maxcdn.com/36x36/1f3a8.png" width="20" height="20">  [Camille Pawlak](http://github.com/PawlakCamille) Artistic director
 
-<img src="http://twemoji.maxcdn.com/36x36/1f3a8.png" width="20" height="20"> [Louis Ghodsi]() UI/UX designer
+<img src="http://twemoji.maxcdn.com/36x36/1f3a8.png" width="20" height="20"> [Louis Ghodsi](http://www.hetic.net) UI/UX designer
 
-<img src="http://twemoji.maxcdn.com/36x36/1f4bb.png" width="20" height="20">  [Nicolas Bernaux]() Lead developer
+<img src="http://twemoji.maxcdn.com/36x36/1f4bb.png" width="20" height="20">  [Nicolas Bernaux](https://github.com/NicolasBernaux) Lead developer
 
 <img src="http://twemoji.maxcdn.com/36x36/1f4bb.png" width="20" height="20">   [Simon Lucas](http://github.com/Reelwens) Front-end developer 
 
@@ -89,7 +89,7 @@ We used the AirB&B JSlinter
 
 #### Git commit convention
 
-We used to add a "gitmoji" to all the commit we made in order to separate them and reconize them easily 
+We used to add a [gitmoji](https://gitmoji.carloscuesta.me/) to all the commit we made in order to separate them and reconize them easily 
 
 ##   GULP
 
@@ -123,5 +123,8 @@ We used to add a "gitmoji" to all the commit we made in order to separate them a
 - SASS
 - Live reload
 
+## Deployment
+
+we use [Netlify](https://www.netlify.com/) to deploy the website online
 
 
