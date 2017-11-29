@@ -31,17 +31,17 @@
 .waves__wave--waveFirst{
     animation: wave 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
     z-index: 2;
-    top: -130px;
+    top: -90px;
 }
 
 .waves__container--WaveSecond{
     animation: swell 7s ease -1.25s infinite;
     will-change: transform;
-    top: -140px;
+    top: -100px;
 }
 
 .waves__wave--waveSecond{
-    top: -150px;
+    top: -110px;
     animation: wave 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.25s infinite;
     z-index: 1;
 }
@@ -129,7 +129,7 @@
     }
 
     .waves__wave--waveSecond {
-        fill: #E31F33;
+        fill: rgba(#e31f33, 0.6);
     }
 
     .waves__wave--subWaveDiv {

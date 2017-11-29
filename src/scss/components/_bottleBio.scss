@@ -41,18 +41,30 @@
             padding: 0 70px 40px 70px;
         }
     }
+
+    .bottle__bioClose {
+        opacity: 0.7;
+    }
 }
 
 .bottle__bioClose {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    opacity: 0.7;
-    width: 30px;
+    position: fixed;
+    padding: 10px;
+    width: 34px;
+    height: 34px;
+    background-color: white;
+    border-radius: 100px;
+    top: 55px;
+    left: 40px;
+    opacity: 0;
     cursor: pointer;
-    transition: all .3s ease-out;
 
-    &:hover {
+    img {
+        transition: all .3s ease-out;
+        width: 14px;
+    }
+
+    &:hover img {
         transform: rotate(90deg);
     }
 }
@@ -68,6 +80,11 @@
     @media (min-width: $tablet) {
         font-size: 50px;
     }
+
+    @media (min-width: $desktop) {
+        padding-top: 50px;
+        font-size: 70px;
+    }
 }
 
 .bottle__bioTitle {
@@ -80,11 +97,20 @@
     @media (min-width: $tablet) {
         font-size: 65px;
     }
+
+    @media (min-width: $desktop) {
+        font-size: 85px;
+        padding-bottom: 10px;
+    }
 }
 
 .bottle__bioButton {
     padding-top: 30px;
     text-align: center;
+
+    @media (min-width: $desktop) {
+        padding-top: 40px;
+    }
 
     a {
         display: inline-block;
@@ -127,13 +153,22 @@
     font-size: 16px;
     line-height: 1.5;
     padding-top: 20px;
+
+    @media (min-width: $desktop) {
+        font-size: 22px;
+    }
 }
 
 .bottle__bioHead {
     font-weight: 500;
     font-size: 20px;
-    padding: 35px 0 0 0;
+    padding-top: 35px;
     text-transform: uppercase;
+
+    @media (min-width: $desktop) {
+        font-size: 28px;
+        padding-top: 45px;
+    }
 }
 
 .bottle__bioParagraph {
@@ -145,6 +180,11 @@
 
     @media (min-width: $tablet) {
         text-align: left;
+    }
+
+    @media (min-width: $desktop) {
+        font-size: 20px;
+        padding-top: 20px;
     }
 }
 
@@ -164,6 +204,9 @@
     font-size: 12px;
     margin-left: 30px;
 
+    @media (min-width: $desktop) {
+        font-size: 15px;
+    }
 }
 
 .bottle__bioArrayLine_value {
@@ -171,4 +214,8 @@
     font-size: 12px;
     float: right;
     margin-right: 30px;
+
+    @media (min-width: $desktop) {
+        font-size: 15px;
+    }
 }
