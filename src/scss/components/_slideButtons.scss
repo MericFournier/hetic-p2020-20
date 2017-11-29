@@ -19,7 +19,8 @@
         margin-right: 10px;
         transition: all .3s;
         cursor: pointer;
-
+        user-select: none;
+        
         &:hover {
             color: #696cc2;
         }
