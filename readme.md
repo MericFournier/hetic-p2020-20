@@ -9,18 +9,18 @@ A web project created for the Front-End class in 3rd grade at [HÉTIC](http://ww
 
 ###### Online version here : http://fanta.nicolas-bernaux.com :fa-check-square-o:
 
-[TOCM]
+
 
 ![](http://www.promotional-gifts.com/wp-content/uploads/2017/03/fanta-twisted-bottle-title.jpg)
 
-##  :fa-align-justify: Description
+##  Description
 
 During our first semester of front-end class in 3rd grade of HÉTIC ( hight studies in information and communication ) we had to create the website of a company. we choosed to work on Fanta's product because we both loved their originality and the high potential of creativity between fanta's universe made of colors and fruits ! 
 
 This project allowed us to apply all the things we learned in front-end class along the trimester ! 
 
 
-## :fa-exclamation:  Required
+##  Required
 
 
 In order to install this project on you computer, you need : 
@@ -28,17 +28,17 @@ In order to install this project on you computer, you need :
 - [NPM](https://www.npmjs.com/ "NPM")
 - [Yarn ](https://yarnpkg.com/lang/en/ "Yarn ")
 
-## :fa-cogs:  Installation
+##   Installation
 
 To install this project on your computer,  follow these instructions : 
 
-`$ CD your repository`
+`$ cd your repository`
 
-`$ GIT CLONE this project git's url`
+`$ git clone this project git's url`
 
-`$ CD hetic-p2020-20`
+`$ cd hetic-p2020-20`
 
-`$ NPM install` :
+`$ npm install` :
 
 Then, you can run the project in your browser or build the project.
 
@@ -56,7 +56,7 @@ Then, you can run the project in your browser or build the project.
 
 
 
-## :fa-users:  Team members 
+##   Team members 
 
 <img src="http://twemoji.maxcdn.com/36x36/1f46e.png" width="20" height="20">  [Alison Heredia](http://github.com/cerise24) Project manager
 
@@ -77,7 +77,7 @@ Special Thanks to our teachers
 
 <img src="http://twemoji.maxcdn.com/36x36/1f451.png" width="20" height="20"> [Johann Pinson](https://github.com/johannpinson) Front-end teacher
 
-## :fa-star: Conventions
+##  Conventions
 
 #### SCSS
 
@@ -91,7 +91,7 @@ We used the AirB&B JSlinter
 
 We used to add a "gitmoji" to all the commit we made in order to separate them and reconize them easily 
 
-## :fa-cog:  GULP
+##   GULP
 
 #### Dependencies
 
