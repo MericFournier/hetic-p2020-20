@@ -58,24 +58,24 @@ Then, you can run the project in your browser or build the project.
 
 ## :fa-users:  Team members 
 
-![](http://twemoji.maxcdn.com/36x36/1f46e.png =15x15)  [Alison Heredia](http://github.com/cerise24) Project manager
+<img src="http://twemoji.maxcdn.com/36x36/1f46e.png" width="20" height="20">  [Alison Heredia](http://github.com/cerise24) Project manager
 
-![](http://twemoji.maxcdn.com/36x36/1f3a8.png =15x15)  [Camille Pawlak](http://github.com/PawlakCamille) Artistic director
+<img src="http://twemoji.maxcdn.com/36x36/1f3a8.png" width="20" height="20">  [Camille Pawlak](http://github.com/PawlakCamille) Artistic director
 
-![](http://twemoji.maxcdn.com/36x36/1f3a8.png =15x15) [Louis Ghodsi]() UI/UX designer
+<img src="http://twemoji.maxcdn.com/36x36/1f3a8.png" width="20" height="20"> [Louis Ghodsi]() UI/UX designer
 
-![](http://twemoji.maxcdn.com/36x36/1f4bb.png =15x15)  [Nicolas Bernaux]() Lead developer
+<img src="http://twemoji.maxcdn.com/36x36/1f4bb.png" width="20" height="20">  [Nicolas Bernaux]() Lead developer
 
-![](http://twemoji.maxcdn.com/36x36/1f4bb.png =15x15)   [Simon Lucas](http://github.com/Reelwens) Front-end developer 
+<img src="http://twemoji.maxcdn.com/36x36/1f4bb.png" width="20" height="20">   [Simon Lucas](http://github.com/Reelwens) Front-end developer 
 
-![](http://twemoji.maxcdn.com/36x36/1f4bb.png =15x15)  [Meric Fournier](http://github.com/MericFournier) Front-end developer and Git manager
+<img src="http://twemoji.maxcdn.com/36x36/1f4bb.png" width="20" height="20">  [Meric Fournier](http://github.com/MericFournier) Front-end developer and Git manager
 
 
 Special Thanks to our teachers 
 
-![](http://twemoji.maxcdn.com/36x36/1f451.png =15x15) [Bastien Calou](https://github.com/bcalou) Front-end teacher
+<img src="http://twemoji.maxcdn.com/36x36/1f451.png" width="20" height="20"> [Bastien Calou](https://github.com/bcalou) Front-end teacher
 
-![](http://twemoji.maxcdn.com/36x36/1f451.png =15x15) [Johann Pinson](https://github.com/johannpinson) Front-end teacher
+<img src="http://twemoji.maxcdn.com/36x36/1f451.png" width="20" height="20"> [Johann Pinson](https://github.com/johannpinson) Front-end teacher
 
 ## :fa-star: Conventions
 
