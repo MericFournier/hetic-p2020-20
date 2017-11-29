@@ -36,6 +36,10 @@
     .bottle__bioArrayLine {
         border-color: #F99E36;
     }
+
+    .bottle__bioClose {
+        box-shadow: 0px 2px 4px 0px rgba(249, 158, 54, 0.5);
+    }
 }
 
 
@@ -125,7 +129,7 @@ section {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 10px 15px;
+    padding: 10px 0;
     border-radius: 1000px;
     transition: transform .3s ease-out, opacity .3s ease-out, transform 0.2s, box-shadow 0.6s;
     cursor: pointer;
@@ -133,14 +137,26 @@ section {
     opacity: 1;
     transition: all .3s ease-out;
 
+    a {
+        padding: 10px 15px;
+    }
+
     @media (min-width: $tablet) {
         font-size: 2.5vw;
-        padding: 15px 25px;
+        padding: 15px 0;
+
+        a {
+            padding: 15px 25px;
+        }
     }
 
     @media (min-width: $desktop) {
         font-size: 1.5vw;
-        padding: 20px 35px;
+        padding: 20px 0;
+
+        a {
+            padding: 15px 25px;
+        }
     }
 
     &:hover {
@@ -168,5 +184,169 @@ section {
     @media (min-width: $desktop) {
         width: 22vw;
         transform: translateX(-69%) translateY(-16%) rotate(21.8deg);
+    }
+}
+
+/*
+ * Dynamic style
+ */
+
+.section.orange {
+    .bottle__labelTitle {
+        color: #F99E36;
+    }
+
+    .bottle__labelButton {
+        color: #F99E36;
+        box-shadow: 0px 2px 4px 0px rgba(249, 158, 54, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(249, 158, 54, 0.5);
+        }
+    }
+
+    .bottle__bioTitle {
+        color: #F99E36;
+    }
+
+    .bottle__bioButton a {
+        color: #F99E36;
+        box-shadow: 0px 2px 4px 0px rgba(249, 158, 54, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(249, 158, 54, 0.5);
+        }
+    }
+
+    .bottle__bioHead {
+        color: #F99E36;
+    }
+
+    .bottle__bioArrayLine {
+        border-color: #F99E36;
+    }
+
+    .bottle__bioClose {
+        box-shadow: 0px 2px 4px 0px rgba(249, 158, 54, 0.5);
+    }
+}
+
+.section.citron-frappe {
+    .bottle__labelTitle {
+        color: #FFCF2E;
+    }
+
+    .bottle__labelButton {
+        color: #FFCF2E;
+        box-shadow: 0px 2px 4px 0px rgba(255, 207, 46, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(255, 207, 46, 0.5);
+        }
+    }
+
+    .bottle__bioTitle {
+        color: #FFCF2E;
+    }
+
+    .bottle__bioButton a {
+        color: #FFCF2E;
+        box-shadow: 0px 2px 4px 0px rgba(255, 207, 46, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(255, 207, 46, 0.5);
+        }
+    }
+
+    .bottle__bioHead {
+        color: #FFCF2E;
+    }
+
+    .bottle__bioArrayLine {
+        border-color: #FFCF2E;
+    }
+
+    .bottle__bioClose {
+        box-shadow: 0px 2px 4px 0px rgba(255, 207, 46, 0.5);
+    }
+}
+
+.section.fraise-kiwi {
+    .bottle__labelTitle {
+        color: #E01327;
+    }
+
+    .bottle__labelButton {
+        color: #E01327;
+        box-shadow: 0px 2px 4px 0px rgba(224, 19, 39, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(224, 19, 39, 0.5);
+        }
+    }
+
+    .bottle__bioTitle {
+        color: #E01327;
+    }
+
+    .bottle__bioButton a {
+        color: #E01327;
+        box-shadow: 0px 2px 4px 0px rgba(224, 19, 39, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(224, 19, 39, 0.5);
+        }
+    }
+
+    .bottle__bioHead {
+        color: #E01327;
+    }
+
+    .bottle__bioArrayLine {
+        border-color: #E01327;
+    }
+
+    .bottle__bioClose {
+        box-shadow: 0px 2px 4px 0px rgba(224, 19, 39, 0.5);
+    }
+}
+
+.section.ananas-citron {
+    .bottle__labelTitle {
+        color: #F9BF3A;
+    }
+
+    .bottle__labelButton {
+        color: #F9BF3A;
+        box-shadow: 0px 2px 4px 0px rgba(249, 191, 58, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(249, 191, 58, 0.5);
+        }
+    }
+
+    .bottle__bioTitle {
+        color: #F9BF3A;
+    }
+
+    .bottle__bioButton a {
+        color: #F9BF3A;
+        box-shadow: 0px 2px 4px 0px rgba(249, 191, 58, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(249, 191, 58, 0.5);
+        }
+    }
+
+    .bottle__bioHead {
+        color: #F9BF3A;
+    }
+
+    .bottle__bioArrayLine {
+        border-color: #F9BF3A;
+    }
+
+    .bottle__bioClose {
+        box-shadow: 0px 2px 4px 0px rgba(249, 191, 58, 0.5);
     }
 }
