@@ -1,7 +1,7 @@
 /** Class */
 export default class GyroscopeBubble {
   /**
-   *
+   * class that change the direction of the bubule's animation when the device orientation change 
    */
   constructor() {
     this.bubble__orientation = document.querySelector('.bubbles__orientation')

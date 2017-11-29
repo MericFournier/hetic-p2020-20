@@ -1,3 +1,7 @@
+/**
+     * Class that create bubles in the background 
+     */
+
 class Bubble {
   constructor() {
     this.container = document.querySelector('.bubbles__orientation')

@@ -1,4 +1,8 @@
-/** Class */
+
+/**
+     * Class that moves the dot inside the buble button with parallax
+     */
+
 export default class ParallaxSwiper {
   constructor() {
     this.swipers__circle = document.querySelector('.section--active .swiper__circle')
