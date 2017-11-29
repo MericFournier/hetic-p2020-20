@@ -76,7 +76,7 @@ export default class GyroscopeBubble {
 
   last() {
     this.vr = this.target - this.position
-    this.pr = this.pr * this.elasticity + this.vr * this.strength
+    this.pr = (this.pr * this.elasticity) + (this.vr * this.strength)
     this.position += this.pr
 
     this.bubble__orientation.style.transform = `rotate( ${this.position}deg)`

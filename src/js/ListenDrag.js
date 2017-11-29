@@ -9,13 +9,13 @@ export default class ListenDrag {
     this.option = {
       grid: 400,
       limit: {
-        x: [1, 200],
-        y: [-5, 5],
+        x: [1, 200, ],
+        y: [-5, 5, ],
       },
       smoothDrag: true,
       onDrag: (drag, e) => {
         this.callbackDrag(e)
-      }
+      },
     }
 
     this.initListener()
@@ -30,16 +30,18 @@ export default class ListenDrag {
       document.querySelector('.section--active').classList.add('section--detailActive')
 
       this.closeDetail()
-
     }
   }
   closeDetail() {
     this.close = document.querySelector('.bottle__bioClose')
     this.close.addEventListener('click', () => {
-      document.querySelector('.section--detailActive').classList.remove('section--detailActive')
-
-      document.querySelector('.swiper__circle').style.top = 0
-      document.querySelector('.swiper__circle').style.left = 0
+      ListenDrag.close()
     })
+  }
+  static close() {
+    document.querySelector('.section--detailActive').classList.remove('section--detailActive')
+
+    document.querySelector('.swiper__circle').style.top = 0
+    document.querySelector('.swiper__circle').style.left = 0
   }
 }

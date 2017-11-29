@@ -1,3 +1,4 @@
+import ListenDrag from '../ListenDrag'
 /** Class that gonna listen scroll on desktop or mobile. */
 
 export default class ScrollListener {
@@ -13,9 +14,12 @@ export default class ScrollListener {
     this.keyboardNavigation = keyboardNavigation
     this.event_timeStamp = -+this.delay
     this.callback = callback.bind(objParent)
+    this.next__button = document.querySelectorAll('.slideButtons__next')
+    this.previous__button = document.querySelectorAll('.slideButtons__previous')
 
     // begin the listener
     this.listenScroll()
+    this.listenButton()
   }
 
   listenScroll() {
@@ -25,6 +29,29 @@ export default class ScrollListener {
     }
     this.desktopListener()
   }
+  listenButton() {
+    this.next__button.forEach((that, i) => {
+      this.next__button[i].addEventListener('click', (e) => {
+        if (e.timeStamp > (this.event_timeStamp + this.delay)) {
+          this.event_timeStamp = e.timeStamp
+          if (document.querySelector('.section--detailActive')) {
+            ListenDrag.close()
+          }
+          this.callback(ScrollListener.next())
+        }
+      })
+      this.previous__button[i].addEventListener('click', (e) => {
+        if (e.timeStamp > (this.event_timeStamp + this.delay)) {
+          this.event_timeStamp = e.timeStamp
+          if (document.querySelector('.section--detailActive')) {
+            ListenDrag.close()
+          }
+          this.callback(ScrollListener.previous())
+        }
+      })
+    })
+  }
+
 
   /**
      * Active listener on mobile
