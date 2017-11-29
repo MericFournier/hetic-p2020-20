@@ -2,7 +2,7 @@ import Draggable from 'Draggable'
 /** Class */
 export default class ListenDrag {
   /**
-   *
+   * Class that create a drag section to show the botles
    */
   constructor() {
     this.element = document.querySelectorAll('.swiper__circle')
