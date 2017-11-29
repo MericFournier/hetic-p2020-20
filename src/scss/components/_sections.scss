@@ -350,3 +350,43 @@ section {
         box-shadow: 0px 2px 4px 0px rgba(249, 191, 58, 0.5);
     }
 }
+
+.section.pomme-cerise {
+    .bottle__labelTitle {
+        color: #D92B23;
+    }
+
+    .bottle__labelButton {
+        color: #D92B23;
+        box-shadow: 0px 2px 4px 0px rgba(217, 43, 35, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(217, 43, 35, 0.5);
+        }
+    }
+
+    .bottle__bioTitle {
+        color: #D92B23;
+    }
+
+    .bottle__bioButton a {
+        color: #D92B23;
+        box-shadow: 0px 2px 4px 0px rgba(217, 43, 35, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(217, 43, 35, 0.5);
+        }
+    }
+
+    .bottle__bioHead {
+        color: #D92B23;
+    }
+
+    .bottle__bioArrayLine {
+        border-color: #D92B23;
+    }
+
+    .bottle__bioClose {
+        box-shadow: 0px 2px 4px 0px rgba(217, 43, 35, 0.5);
+    }
+}
