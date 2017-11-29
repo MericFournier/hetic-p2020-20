@@ -1,5 +1,4 @@
-import Draggable from './draggable'
-
+import Draggable from 'Draggable'
 /** Class */
 export default class ListenDrag {
   /**
