@@ -527,7 +527,7 @@ section {
 
     .bottle__bioButton a {
         color: #EEA701;
-        box-shadow: 0px 2px 4px 0px rrgba(238, 167, 1, 0.5);
+        box-shadow: 0px 2px 4px 0px rgba(238, 167, 1, 0.5);
 
         &:hover {
             box-shadow: 0px 3px 8px 0px rgba(238, 167, 1, 0.5);
@@ -544,5 +544,45 @@ section {
 
     .bottle__bioClose {
         box-shadow: 0px 2px 4px 0px rgba(238, 167, 1, 0.5);
+    }
+}
+
+.section.framboise-passion {
+    .bottle__labelTitle {
+        color: #B0213F;
+    }
+
+    .bottle__labelButton {
+        color: #B0213F;
+        box-shadow: 0px 2px 4px 0px rgba(176, 33, 63, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(176, 33, 63, 0.5);
+        }
+    }
+
+    .bottle__bioTitle {
+        color: #B0213F;
+    }
+
+    .bottle__bioButton a {
+        color: #B0213F;
+        box-shadow: 0px 2px 4px 0px rgba(176, 33, 63, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(176, 33, 63, 0.5);
+        }
+    }
+
+    .bottle__bioHead {
+        color: #B0213F;
+    }
+
+    .bottle__bioArrayLine {
+        border-color: #B0213F;
+    }
+
+    .bottle__bioClose {
+        box-shadow: 0px 2px 4px 0px rgba(176, 33, 63, 0.5);
     }
 }
