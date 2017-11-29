@@ -64,12 +64,12 @@ Then, you can run the project in your browser or build the project.
 
 :tw-1f3a8: [Louis Ghodsi]() UI/UX designer
 
-  :tw-1f4bb:  [Nicolas Bernaux]() Lead developer
+:tw-1f4bb:  [Nicolas Bernaux]() Lead developer
 
- :tw-1f4bb:  [Simon Lucas](http://github.com/Reelwens) Front-end developer 
+:tw-1f4bb:  [Simon Lucas](http://github.com/Reelwens) Front-end developer 
 
-  :tw-1f4bb: [Meric Fournier](http://github.com/MericFournier) Front-end developer and Git manager
-  
+:tw-1f4bb: [Meric Fournier](http://github.com/MericFournier) Front-end developer and Git manager
+
 Special Thanks to our teachers 
 
 :tw-1f451: [Bastien Calou](https://github.com/bcalou) Front-end teacher
@@ -78,40 +78,40 @@ Special Thanks to our teachers
 
 ## :fa-star: Conventions
 
-####SCSS
+#### SCSS
 
 We used the BEM ( block element modifier ) convention
 
-####Javascript
+#### Javascript
 
 We used the AirB&B JSlinter 
 
-####Git commit convention
+#### Git commit convention
 
 We used to add a "gitmoji" to all the commit we made in order to separate them and reconize them easily 
 
 ## :fa-cog:  GULP
 
-####Dependencies
+#### Dependencies
 
-  - autoprefixer
-  - babel
-  - buffer
-  - browserify
-  - browsersync
-  - concat
-  - connect
-  - cssnano
-  - draggable
-  - imagemin
-  - minify
-  - notify
-  - plumber
-  - rename
-  - sass
-  - sugar
-  - uglify
-  - sourcemap
+- autoprefixer
+- babel
+- buffer
+- browserify
+- browsersync
+- concat
+- connect
+- cssnano
+- draggable
+- imagemin
+- minify
+- notify
+- plumber
+- rename
+- sass
+- sugar
+- uglify
+- sourcemap
 
 #### Features
 
