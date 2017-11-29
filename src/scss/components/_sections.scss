@@ -430,3 +430,83 @@ section {
         box-shadow: 0px 2px 4px 0px rgba(241, 141, 27, 0.5);
     }
 }
+
+.section.cassis {
+    .bottle__labelTitle {
+        color: #76000E;
+    }
+
+    .bottle__labelButton {
+        color: #76000E;
+        box-shadow: 0px 2px 4px 0px rgba(119, 0, 14, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(119, 0, 14, 0.5);
+        }
+    }
+
+    .bottle__bioTitle {
+        color: #76000E;
+    }
+
+    .bottle__bioButton a {
+        color: #76000E;
+        box-shadow: 0px 2px 4px 0px rgba(119, 0, 14, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(119, 0, 14, 0.5);
+        }
+    }
+
+    .bottle__bioHead {
+        color: #76000E;
+    }
+
+    .bottle__bioArrayLine {
+        border-color: #76000E;
+    }
+
+    .bottle__bioClose {
+        box-shadow: 0px 2px 4px 0px rgba(119, 0, 14, 0.5);
+    }
+}
+
+.section.peche-abricot {
+    .bottle__labelTitle {
+        color: #EEA701;
+    }
+
+    .bottle__labelButton {
+        color: #EEA701;
+        box-shadow: 0px 2px 4px 0px rgba(238, 167, 1, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(238, 167, 1, 0.5);
+        }
+    }
+
+    .bottle__bioTitle {
+        color: #EEA701;
+    }
+
+    .bottle__bioButton a {
+        color: #EEA701;
+        box-shadow: 0px 2px 4px 0px rrgba(238, 167, 1, 0.5);
+
+        &:hover {
+            box-shadow: 0px 3px 8px 0px rgba(238, 167, 1, 0.5);
+        }
+    }
+
+    .bottle__bioHead {
+        color: #EEA701;
+    }
+
+    .bottle__bioArrayLine {
+        border-color: #EEA701;
+    }
+
+    .bottle__bioClose {
+        box-shadow: 0px 2px 4px 0px rgba(238, 167, 1, 0.5);
+    }
+}
