@@ -1,8 +1,12 @@
 .slideButtons {
     position: absolute;
     right: 0px;
-    top: 85vh;
-    transform: rotate(-90deg);
+    top: 70vh;
+    transform: rotate(-90deg) translateY(25px);
+
+    @media (min-width: $tablet) {
+        transform: rotate(-90deg);
+    }
 
     .slideButtons__previous, .slideButtons__next {
         display: inline-block;
