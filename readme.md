@@ -58,24 +58,24 @@ Then, you can run the project in your browser or build the project.
 
 ## :fa-users:  Team members 
 
-![](http://twemoji.maxcdn.com/36x36/1f46e.png)  [Alison Heredia](http://github.com/cerise24) Project manager
+![](http://twemoji.maxcdn.com/36x36/1f46e.png =15x15)  [Alison Heredia](http://github.com/cerise24) Project manager
 
-![](http://twemoji.maxcdn.com/36x36/1f3a8.png)  [Camille Pawlak](http://github.com/PawlakCamille) Artistic director
+![](http://twemoji.maxcdn.com/36x36/1f3a8.png =15x15)  [Camille Pawlak](http://github.com/PawlakCamille) Artistic director
 
-![](http://twemoji.maxcdn.com/36x36/1f3a8.png) [Louis Ghodsi]() UI/UX designer
+![](http://twemoji.maxcdn.com/36x36/1f3a8.png =15x15) [Louis Ghodsi]() UI/UX designer
 
-![](http://twemoji.maxcdn.com/36x36/1f4bb.png)  [Nicolas Bernaux]() Lead developer
+![](http://twemoji.maxcdn.com/36x36/1f4bb.png =15x15)  [Nicolas Bernaux]() Lead developer
 
-![](http://twemoji.maxcdn.com/36x36/1f4bb.png)   [Simon Lucas](http://github.com/Reelwens) Front-end developer 
+![](http://twemoji.maxcdn.com/36x36/1f4bb.png =15x15)   [Simon Lucas](http://github.com/Reelwens) Front-end developer 
 
-![](http://twemoji.maxcdn.com/36x36/1f4bb.png)  [Meric Fournier](http://github.com/MericFournier) Front-end developer and Git manager
+![](http://twemoji.maxcdn.com/36x36/1f4bb.png =15x15)  [Meric Fournier](http://github.com/MericFournier) Front-end developer and Git manager
 
 
 Special Thanks to our teachers 
 
-![](http://twemoji.maxcdn.com/36x36/1f451.png) [Bastien Calou](https://github.com/bcalou) Front-end teacher
+![](http://twemoji.maxcdn.com/36x36/1f451.png =15x15) [Bastien Calou](https://github.com/bcalou) Front-end teacher
 
-![](http://twemoji.maxcdn.com/36x36/1f451.png) [Johann Pinson](https://github.com/johannpinson) Front-end teacher
+![](http://twemoji.maxcdn.com/36x36/1f451.png =15x15) [Johann Pinson](https://github.com/johannpinson) Front-end teacher
 
 ## :fa-star: Conventions
 
