@@ -17,6 +17,7 @@ export default class ListenDrag {
         this.callbackDrag(e)
       },
     }
+    this.close = document.querySelectorAll('.bottle__bioClose')
 
     this.initListener()
   }
@@ -33,15 +34,17 @@ export default class ListenDrag {
     }
   }
   closeDetail() {
-    this.close = document.querySelector('.bottle__bioClose')
-    this.close.addEventListener('click', () => {
-      ListenDrag.close()
+    this.close.forEach((that) => {
+      that.addEventListener('click', () => {
+        ListenDrag.close()
+      })
     })
   }
   static close() {
+    document.querySelector('.section--detailActive .swiper__circle').style.top = 0
+    document.querySelector('.section--detailActive .swiper__circle').style.left = 0
+
     document.querySelector('.section--detailActive').classList.remove('section--detailActive')
 
-    document.querySelector('.swiper__circle').style.top = 0
-    document.querySelector('.swiper__circle').style.left = 0
   }
 }
