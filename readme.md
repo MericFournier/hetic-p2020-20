@@ -26,7 +26,6 @@ This project allowed us to apply all the things we learned in front-end class al
 In order to install this project on you computer, you need : 
 - [NodeJS](https://nodejs.org/en/ "NodeJS") >= 6.4  
 - [NPM](https://www.npmjs.com/ "NPM")
-- [Yarn ](https://yarnpkg.com/lang/en/ "Yarn ")
 
 ##   Installation
 
