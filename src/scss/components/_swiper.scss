@@ -47,10 +47,18 @@
         height: 85px;
     }
 
+}
+
+.swiper__circle {
     &:hover + .swiper__arrow--container::after {
         display: block;
         animation: hoverArrow 0.4s ease-out 0.2s;
     }
+}
+
+.swiper__arrow--container {
+    position: relative;
+    z-index: -1;
 }
 
 .swiper__arrow--container::after {
@@ -61,7 +69,6 @@
     background: white;
     bottom: 23%;
     opacity: 0;
-    display: none;
 }
 
 .swiper__circle--centerCircle {
