@@ -43,8 +43,10 @@ export default class ListenDrag {
   static close() {
     document.querySelector('.section--detailActive .swiper__circle').style.top = 0
     document.querySelector('.section--detailActive .swiper__circle').style.left = 0
+    document.querySelector('.section--detailActive').scrollTop = 0
 
-    document.querySelector('.section--detailActive').classList.remove('section--detailActive')
+
+      document.querySelector('.section--detailActive').classList.remove('section--detailActive')
 
   }
 }
